@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Enkelt - Dokumentation</title>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Enkelt är ett programmeringsspråk med svensk syntax.">
+	<meta name="author" content="Edvard Busck-Nielsen">
+	<link rel="shortcut icon" href="favicon.png">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<!-- FontAwesome JS -->
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+	<!-- Global CSS -->
+	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+	<!-- Theme CSS -->
+	<link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+	
+	<!-- Extra CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<!-- VueJS -->
+	<!-- development version, includes helpful console warnings -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+	
+	<!-- production version, optimized for size and speed -->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123148803-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		
+		gtag('config', 'UA-123148803-3');
+	</script>
+
+</head>
+
+<body class="body-pink">
+<div id="app">
+	<a href="#header" id="to_top_btn" class="scrollto">
+		<em class="fa fa-chevron-up"></em>
+	</a>
+	<div class="page-wrapper">
+		<header id="header" class="header">
+        <div class="container">
+            <div class="branding">
+                <h1 class="logo">
+                    <a href="index.html">
+                        <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                        <span class="text-highlight">Enkelt </span><span class="text-bold"><img src="favicon.png" height="60px" width="60px" alt="Enkelt"></span>
+                    </a>
+                </h1>
+            </div>
+            <!--//branding-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="index.html">Hem</a>
+                </li>
+                <li class="breadcrumb-item active">Dokumentation</li>
+            </ol>
+            <div class="top-search-box">
+	            <form class="form-inline search-form justify-content-center" action="" method="get" _lpchecked="1">
+	                <input type="text" placeholder="Sök..." name="search" class="form-control search-input" v-model="documentation_search" @input="performSearch()"  @keydown.enter.prevent="performSearch()">
+	            </form>
+            </div>
+        </div>
+        <!--//container-->
+    </header>
+		<div class="doc-wrapper">
+			<div class="container">
+				<div id="doc-header" class="doc-header text-center">
+					<h1 class="doc-title">Dokumentation</h1>
+					<div class="meta">Senast uppdaterad: Mars 9, 2020</div>
+					<br>
+				
+				</div>
+				<!--//doc-header-->
+				<div class="doc-body row">
+					<div class="doc-content col-md-9 col-12 order-1">
+						<div class="content-inner" v-for="element in documentation_elements">
+							<section :id="element.id" class="doc-section">
+								<h1 class="section-header" v-text="element.title"></h1>
+								<br>
+								<p>
+								    <a class="btn btn-primary" data-toggle="collapse" :href="'#'+element.id+'_nav'" role="button" aria-expanded="true">
+									    <em class="fas fa-caret-down"></em>
+								    </a>
+								</p>
+								<div :class="collapse_classes" :id="element.id+'_nav'">
+							        <div class="card card-body">
+								        <ul style="font-size: 14px;" v-for="item in element.nav_items">
+											<li>
+												<a class="nav-link scrollto" :href="item[0].href" @click="resetSearch" v-text="item[0].title"></a>
+												<nav v-for="thing in item" class="doc-sub-menu">
+													<a class="nav-link scrollto" :href="thing.href" @click="resetSearch" v-if="thing != item[0]" v-text="thing.title"></a>
+												</nav>
+											</li>
+										</ul>
+							        </div>
+								</div>
+								
+								<div v-for="section in element.sections">
+									<div :id="section.id" class="section-block" v-if="should_show(section.title+section.id+section.usage+section.content)">
+										<h1 class="section-title" v-text="section.title"></h1>
+					                    <h4 style="font-weight: normal !important;" v-html="section.description"></h4>
+										<h3 v-if="section.usage != ''" v-text="'Hur '+section.title+' används:'"></h3>
+										<div class="code-block" v-if="section.usage != ''">
+                                            <code v-html="section.usage"></code>
+                                        </div>
+										<div v-for="sub_section in section.sub_sections">
+											<div :id="sub_section.id" class="sub-section">
+								                <h2 class="sub-header" v-text="sub_section.title"></h2>
+								                <h4 v-html="sub_section.description"></h4>
+												<div v-for="example in sub_section.examples">
+													<app-code-example
+															:title="example.title"
+															:description="example.description"
+															:lines="example.code_lines"
+															:output="example.output_lines">
+													</app-code-example>
+						                            <p v-html="example.extra"></p>
+													<div v-if="example.callout">
+														<app-callout :title="example.callout.title" :type="example.callout.type" :body="example.callout.body" :icon="example.callout.icon"></app-callout>
+													</div>
+						                            <br>
+						                            <br>
+												</div>
+											</div>
+											<hr>
+										</div>
+										<div v-for="example in section.examples">
+													<app-code-example
+															:title="example.title"
+															:description="example.description"
+															:lines="example.code_lines"
+															:output="example.output_lines">
+													</app-code-example>
+						                            <p v-html="example.extra"></p>
+													<div v-if="example.callout">
+														<app-callout :title="example.callout.title" :type="example.callout.type" :body="example.callout.body" :icon="example.callout.icon"></app-callout>
+													</div>
+										</div>
+										<br>
+										<div v-html="section.content"></div>
+										<div v-for="table in section.tables">
+											<div v-if="table.title == 'Nyckelord'">
+												<form class="form-inline search-form">
+	                                                <input type="text" placeholder="Sök..." name="search" class="form-control search-input" v-model="keyword_search">
+                                                </form>
+											</div>
+											<app-table :ths="table.ths" :tbody="getParam(table.tbody)" :title="table.title"></app-table>
+										</div>
+										<hr>
+									</div>
+									<div>
+								</div>
+							</section>
+							<!--//doc-section-->
+						</div>
+						<!--//content-inner-->
+					</div>
+					<!--//doc-content-->
+					<div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex" style="height: auto">
+						<div id="doc-nav" class="doc-nav">
+							<nav id="doc-menu" class="nav doc-menu flex-column sticky">
+								<div class="main-search-box pt-sm-0 pb-sm-0" style="width: 15px;">
+									<form class="form-inline search-form justify-content-right">
+										<input type="text" placeholder="Sök..." name="search" class="form-control search-input" v-model="documentation_search" @input="performSearch()"  @keydown.enter.prevent="performSearch()">
+									</form>
+								</div>
+								<div v-for="link in documentation_navs">
+									<a class="nav-link scrollto" :href="link.link" @click="resetSearch" v-text="link.title"></a>
+								</div>
+							</nav>
+							<!--//doc-menu-->
+						</div>
+						<!--//doc-nav-->
+					</div>
+					<!--//doc-sidebar-->
+				</div>
+				<!--//doc-body-->
+				<div>
+					<br />
+					<br />
+					<div class="row">
+						<h3 id="testa">Testa Enkelt i webbläsaren!</h3>
+						<a class="btn btn-link btn-cta main_button" href="https://redigerare.enkelt.io" target="_blank"><em class="fas fa-link"></em>Gå till webbredigeraren</a>
+					</div>
+					<br />
+					<iframe title="Enkelt webbredigerare" src="https://redigerare.enkelt.io" width="100%" height="700"></iframe>
+					<app-footer-img></app-footer-img>
+				</div>
+			</div>
+			<!--//container-->
+		</div>
+		<!--//doc-wrapper-->
+	</div>
+	<app-footer></app-footer>
+</div>
+<!-- Main Javascript -->
+<script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" src="assets/plugins/stickyfill/src/stickyfill.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+<script type="text/javascript" src="assets/js/vue.js"></script>
+</body>
+
+</html>
