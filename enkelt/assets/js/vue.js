@@ -175,7 +175,7 @@ let app = new Vue({
   	      version: '3.0',
 	      project_github_link: 'https://github.com/Enkelt/Enkelt',
 	      personal_github_link: 'https://github.com/Buscedv',
-		download_link: 'https://enkelt.github.io/LaddaNerEnkelt/#/home?url=https://github.com/Enkelt/Enkelt/tree/master/Enkelt',
+		download_link: 'https://ladda-ner.enkelt.io/#/home?url=https://github.com/Enkelt/Enkelt/tree/master/Enkelt',
 	      collapse_classes: 'collapse show',
 	      documentation_navs: [
 		      {
