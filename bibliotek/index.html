@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<title>Enkelt - Bibliotek</title>
+		<meta name="description" content="Dela med dig av dina Enkeltbibliotek och hitta nya att experimentera med. Enkelt är världens första svenska programmeringsspråk.">
+		<meta name="author" content="Edvard Busck-Nielsen">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		
+		<link rel="shortcut icon" type="image/ico" href="logo.png">
+		
+		<!-- BOOTSTRAP -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+		
+		<!-- OTHER CSS -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+		<!-- OTHER -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+		
+		<!-- FONT AWESOME -->
+		<script src="https://kit.fontawesome.com/315cfa18fb.js"></script>
+		
+		<!-- VUE JS -->
+		<!-- development version, includes helpful console warnings -->
+		<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+		<!-- production version, optimized for size and speed -->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123148803-5"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+		    function gtag(){dataLayer.push(arguments);}
+		    gtag('js', new Date());
+		
+		    gtag('config', 'UA-123148803-5');
+		</script>
+		
+		
+	</head>
+	<body>
+		<div id="app">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+				<a class="navbar-brand" href="https://enkelt.io"><img src="logo.png" height="50px" width="auto" alt="Enkelt"> Enkelt</a>
+		        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		            <span class="navbar-toggler-icon"></span>
+		        </button>
+		
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			        <ul class="navbar-nav mr-auto">
+				        <li class="nav-item">
+					        <a class="nav-link" href="https://enkelt.io">Hem</a>
+				        </li>
+				        <li class="nav-item">
+					        <a class="nav-link" href="https://redigerare.enkelt.io">Redigerare</a>
+				        </li>
+				        <li class="nav-item active">
+					        <a class="nav-link" href="#">Bibliotek <span class="sr-only">(current)</span></a>
+				        </li>
+			        </ul>
+				</div>
+			</nav>
+			<br>
+			<header>
+				<div id="header_card">
+					<div class="row">
+						<div class="col">
+							<h1>Enkelt bibliotek</h1>
+							<h3>Dela med dig av dina bibliotek och hitta nya att experimentera med!</h3>
+							
+						</div>
+						<div class="col">
+							<div id="upload_area">
+								<div class="row">
+									<button class="btn btn-info" id="add_btn" data-toggle="modal" data-target="#newLibraryModal" @click="openNewLibraryModal()"><em class="fas fa-plus"></em></button>
+								</div>
+								<div class="row">
+									<img id= "upload_img" src="ladda-up.png" alt="Ladda up -->">
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+				
+			</header>
+			
+			<div class="container-fluid" id="main_content">
+				
+				<nav id="latest">
+					<ul>
+						<div>
+							<h1>Bibliotek</h1>
+							<div class="input-group mb-3">
+							    <input type="text" class="form-control" placeholder="Sök..." aria-label="Sök" aria-describedby="Sök efter bibliotek" v-model="search" @input="startSearch()">
+							</div>
+						</div>
+						<hr>
+						<div v-for="library in filtered_libraries">
+							<li>
+								<h4 v-text="library.title"></h4>
+								<p v-text="library.description"></p>
+								<button class="btn btn-info" data-toggle="modal" data-target="#libraryModal" @click="openLibrary(library.title, library.description)">Öppna</button>
+								
+							</li>
+						</div>
+					</ul>
+					
+				</nav>
+				
+				<div class="row justify-content-center">
+					<nav>
+					    <ul class="pagination">
+					        <li class="page-item" v-if="current_page > 0"><a class="page-link" href="#" @click="page_back()">Bakåt</a></li>
+						    <li class="page-item disabled" v-if="current_page <= 0"><a class="page-link" href="#" @click="page_back()">Bakåt</a></li>
+						    <div v-for="i in get_libraries_count()">
+					            <li class="page-item"><a class="page-link" href="#" v-text="i" @click="change_page(i-1)"></a></li>
+						    </div>
+					        <li class="page-item" v-if="current_page < get_libraries_count()-1"><a class="page-link" href="#" @click="page_forward()">Nästa</a></li>
+						    <li class="page-item disabled" v-if="current_page >= get_libraries_count()-1"><a class="page-link" href="#" @click="page_forward()">Nästa</a></li>
+					    </ul>
+					</nav>
+					
+				</div>
+				
+				<br>
+				<br>
+				<br>
+				
+				<div class="row justify-content-center">
+					<p>&copy; Edvard Busck-Nielsen 2019</p>
+					
+				</div>
+			
+			</div>
+			
+			<!-- Modal -->
+			<div class="modal fade" id="libraryModal" tabindex="-1" role="dialog" aria-labelledby="libraryModal" aria-hidden="true">
+			    <div class="modal-dialog" role="document">
+			        <div class="modal-content">
+				        <div class="modal-header">
+				            <h5 class="modal-title" id="libraryModalLabel" v-text="openModalData.title"></h5>
+				            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				                <span aria-hidden="true">&times;</span>
+				            </button>
+				        </div>
+			            <div class="modal-body" v-text="openModalData.description">
+			            
+			            </div>
+				        <div class="modal-body">
+					        Importera <strong>{{ openModalData.title }}</strong> så här:
+					        <br>
+					        <code>importera {{ openModalData.title }}</code>
+			            </div>
+				        <div class="modal-footer">
+				            <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+				        </div>
+			        </div>
+				    
+			    </div>
+				
+			</div>
+			
+			<!-- Modal -->
+			<div class="modal fade" id="newLibraryModal" tabindex="-1" role="dialog" aria-labelledby="newLibraryModal" aria-hidden="true">
+			    <div class="modal-dialog modal-xl" role="document">
+			        <div class="modal-content">
+				        <div class="modal-header">
+				            <h5 class="modal-title" id="newLibraryModalLabel">Dela bibliotek</h5>
+				            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				                <span aria-hidden="true">&times;</span>
+				            </button>
+				        </div>
+			            <div class="modal-body">
+			                <h2>Ladda upp ett bibliotek</h2>
+				            <form class="justify-content-center" action="https://formspree.io/kontakt@enkelt.io" method="POST">
+					            <input type="name" placeholder="Namn på ditt bibliotek..." required name="titel">
+					            <br>
+					            <br>
+					            <textarea placeholder="Beskriv ditt bibliotek kort..." cols="40" required name="beskrivning"></textarea>
+					            <br>
+					            <br>
+					            <textarea placeholder="Källkoden för ditt bibliotek..." rows="10" cols="50" required name="kod"></textarea>
+					            <br>
+					            <hr>
+					            <br>
+					            <input type="name" placeholder="Ditt namn (visas på webbsidan)..." required name="namn">
+					            <br>
+					            <br>
+					            <input type="email" placeholder="Din email (frivilligt)..." name="email">
+					            <br>
+					            <p style="font-size: 15px; color: darkgray;">Din information samlas in för att vi ska kunna kontakta dig gällande ditt bibliotek. Om du inte uppger en email kommer du inte att få veta om ditt bibliotek inte godkänts.</p>
+					            <br>
+					            <button type="submit" class="btn btn-info">Skicka in!</button>
+				            </form>
+				            <br>
+				            <p style="font-size: 10px; color: gray;">När du laddat upp biblioteket kommer dett att kontrolleras först så det kan ta några dagar innan det bli publicerat.</p>
+			            </div>
+				        <div class="modal-footer">
+				            <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+				        </div>
+			        </div>
+				    
+			    </div>
+				
+			</div>
+			
+		</div>
+	
+		<!-- BOOTSTRAP JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
+		<!-- VUE JS -->
+		<script src="js/main.js"></script>
+	
+	</body>
+
+</html>
