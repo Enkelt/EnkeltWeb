@@ -1,0 +1,147 @@
+html {
+	scroll-behavior: smooth;
+	height: 100%;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif !important;
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	margin-bottom: 10px;
+}
+
+#cardsRow {
+	width: 95%;
+	min-height: 80vh;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#editorCard {
+	padding: 2px;
+	width: 50%;
+	height: auto;
+}
+
+#outputCard {
+	padding: 2px;
+	width: 50%;
+	height: auto;
+}
+
+#codeForm {
+	height: 100%;
+	width: 100%;
+}
+
+#input {
+	font-family: monospace;
+	font-size: 25px;
+	margin-top: 5px;
+}
+
+#input form {
+	height: 100%;
+}
+
+#inputCode {
+	font-family: monospace;
+	font-size: 20px;
+	width: 100%;
+	min-height: 100%;
+	border-left: 1px solid #9f9f9f;
+	border-top: 1px solid #9f9f9f;
+	border-bottom: 1px solid #fff;
+	border-right: 1px solid #fff;
+	resize: none;
+}
+
+#inputCode:focus {
+	outline: none !important;
+}
+
+#consoleText {
+	max-height: 100%;
+}
+
+#run_a {
+	text-decoration: none !important;
+	color: #fff !important;
+	
+}
+
+#run_a:hover {
+	text-decoration: none !important;
+	color: #fff !important;
+}
+
+#gotToTopButton {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 40px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #1f1f1f; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 8px; /* Some padding */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 15px; /* Increase font size */
+}
+
+#gotToTopButton:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+#mini_footer {
+	display: none;
+	font-size: 10px;
+	color: #1f1f1f;
+	padding: 5px;
+	margin-top: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+.push {
+	height: 5px;
+}
+
+.page-footer a {
+	color: #17a2b8;
+}
+
+.page-footer a:hover {
+	color: #17a2c9;
+}
+
+@media screen and (max-width: 800px) {
+    #editorCard {
+        width: 100%;
+	    margin-bottom: 15px;
+	    padding: 3px;
+    }
+    #outputCard {
+	    margin-top: 15px;
+	    padding-bottom: 3px;
+        width: 100%;
+	    min-height: 100%;
+    }
+    
+    #inputCode {
+	    font-size: 17px;
+    }
+    
+    footer {
+	    display: none !important;
+    }
+    
+    #mini_footer {
+	    display: block;
+    }
+}
