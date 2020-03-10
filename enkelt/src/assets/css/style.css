@@ -1,0 +1,152 @@
+html {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+#logo_res {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+#qr_res {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+#app_res {
+    height: 100%;
+    max-height: 400px;
+    width: auto;
+}
+
+#google_res {
+    height: 100%;
+    max-height: 70px;
+    width: auto;
+}
+
+#to_top_btn {
+    position: fixed; /* Fixed/sticky position */
+    bottom: 5px; /* Place the button at the bottom of the page */
+    right: 10px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    color: #2f2f2f; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 20px; /* Increase font size */
+}
+
+#to_top_btn:hover {
+    color: black;
+}
+
+.btn {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+
+input[type=submit] {
+    background-color: #2f2f2f;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    color: #f4f4f4f4;
+}
+
+.container_form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.breadcrumb {
+    background: none !important;
+}
+
+.github-btn * {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.footer .container a {
+    padding-left: 5px;
+    font-size: 80%;
+}
+
+.desc {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.title, .content-title, .section-title, .block-title {
+    color: #494d55 !important;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.desc .section-title {
+    color: #fff !important;
+}
+
+.btn-cta:not(.main_button) {
+    color: var(--info) !important;
+}
+
+.promo-block .btn-cta {
+    color: #fff !important;
+}
+
+.promo-block h4 {
+    color: #fff !important;
+    font-weight: bold !important;
+}
+
+.logo-inner {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+#head .logo-inner {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo-inner * {
+    padding: 2px;
+}
