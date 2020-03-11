@@ -18,21 +18,21 @@
                                     <section id="download-section" class="doc-section">
                                         <h2 class="section-title">Ladda ner Enkelt</h2>
                                         <div class="section-block">
-                                            <p>Du m&aring;ste b&ouml;rja med att ladda ner Enkelt. Klicka p&aring; den gr&ouml;na knappen under f&ouml;r att b&ouml;rja nerladdningen. Enkelt kan andv&auml;ndas p&aring;
-                                                <em>Mac OSX, Windows och Linux</em>. Mac OSX och Linux versionen &auml;r den samma medan Windows har ett annat program. F&ouml;r att kunna andv&auml;nda Enkelt m&aring;ste du &auml;ven ha tillg&aring;ng till
-                                                <strong>Terminal</strong> eller
+                                            <p>Du m&aring;ste b&ouml;rja med att ladda ner Enkelt. Klicka p&aring; den gr&ouml;na knappen nedtill f&ouml;r att b&ouml;rja nerladdningen. Enkelt kan andv&auml;ndas p&aring;
+                                                <em>Mac OSX, Windows och Linux</em>. F&ouml;r att kunna andv&auml;nda Enkelt m&aring;ste du &auml;ven ha tillg&aring;ng till
+                                                <strong>Terminal</strong> (Mac, Linux) eller
                                                 <strong>Kommandotolken</strong> (Windows) samt ha
                                                 <strong>Python</strong> (v. 3 eller h&ouml;gre) installerat.
                                             </p>
                                             <a class="btn btn-green" :href="download_link" target="_blank" rel="noopener"> Ladda ner Enkelt</a>
                                             <br>
                                             <br>
-                                            <app-callout title="Kan du inte ladda ner Enkelt?" type="success" body="Inga problem! Använd <a href='https://redigerare.enkelt.io' target='_blank'>webbredigeraren</a> istället." icon="fas fa-info"></app-callout>
+                                            <app-callout title="Kan du inte använda den nedladdade versionen av Enkelt?" type="success" body="Inga problem! Använd <a href='https://redigerare.enkelt.io' target='_blank'>webbredigeraren</a> istället." icon="fas fa-info"></app-callout>
                                         </div>
                                     </section>
                                     <!--//doc-section-->
                                     <section id="installation-section" class="doc-section">
-                                        <h2 class="section-title">Att andv&auml;nda och starta Enkelt</h2>
+                                        <h2 class="section-title">Att använda och starta Enkelt</h2>
                                         <div id="step1" class="section-block">
                                             <p>Du k&ouml;r Enkeltkod med f&ouml;ljande kommando. Skriv in kommandot i Terminal p&aring; Mac OSX och Linux eller Kommandotolken p&aring; Windows. Du m&aring;ste &auml;ven vara i samma mapp som Enkelt &auml;r nedladdat
                                                 i.</p>
@@ -46,14 +46,14 @@
                                         </div>
                                         <!--//section-block-->
                                         <div id="step2" class="section-block">
-                                            <h3 class="block-title">Enkelt filtypen</h3>
+                                            <h3 class="block-title">Enkelts filtyp</h3>
                                             <p>Du ser att den sista delen av kommandot &auml;r
                                                 <strong>'min_kod.e'</strong> detta h&auml;nvisar till en
-                                                <em>kodfil</em> d&auml;r det skrivits Enkeltkod.
+                                                <em>kodfil</em> d&auml;r det skrivits Enkelt-kod.
                                                 <strong>'min_kod'</strong> &auml;r
                                                 <em>filnamnet</em> och
-                                                <strong>'.e'</strong> &auml;r Enkelts filtyp. Andv&auml;nd alltid
-                                                <strong>.e</strong> filtypen n&auml;r du g&ouml;r Enkeltkodfiler, Det &auml;r inte
+                                                <strong>'.e'</strong> &auml;r Enkelts filtyp. Anv&auml;nd alltid
+                                                <strong>.e</strong> filtypen n&auml;r du g&ouml;r Enkelt-kodfiler, Det &auml;r inte
                                                 <em>n&ouml;dv&auml;ndigt</em> men det &auml;r rekommenderat.
                                             </p>
                                         </div>
@@ -63,7 +63,7 @@
                                     <section id="code-section" class="doc-section">
                                         <h2 class="section-title">Hej V&auml;rlden i Enkelt.</h2>
                                         <div class="section-block">
-                                            <p>"Hej V&auml;rlden" &auml;r ofta det f&ouml;rsta programmet man visar i ett programmeringsspr&aring;k. H&auml;r &auml;r hur du g&ouml;r ett "Hej v&auml;rlden"-program i Enkelt.</p>
+                                            <p>"Hej V&auml;rlden" &auml;r oftast det f&ouml;rsta programmet man visar i ett programmeringsspr&aring;k. H&auml;r &auml;r hur du g&ouml;r ett "Hej v&auml;rlden" -program i Enkelt.</p>
                                         </div>
                                         <!--//section-block-->
                                         <div id="html" class="section-block">
@@ -73,7 +73,7 @@
                                                 </div><!--//icon-holder-->
                                                 <div class="content">
                                                     <h4 class="callout-title">Tips:</h4>
-                                                    <p>Testa att experimentera med koden efter att du skrivit "Hej v&auml;rlden"-programmet!</p>
+                                                    <p>Testa att experimentera med koden efter att du skrivit klart programmet!</p>
                                                 </div><!--//content-->
                                             </div>
                                             <div class="section-block">
@@ -106,9 +106,9 @@
                                                     </code>
                                                 </div>
                                                 <br />
-                                                <p>Ers&auml;tt
-                                                    <em>"kod.e"</em> med det filnamn du valt. K&ouml;r sedan kommandot!
-                                                    <br /> Om du ser texten "Hej, v&auml;rlden!" gjorde du r&auml;tt och koden fungerar! Om du inte fick r&auml;tt utput, g&aring; tillbaka och kolla om du gjorde ett stavfel.
+                                                <p>
+                                                    Ers&auml;tt <em>"kod.e"</em> med det filnamn du valt. K&ouml;r sedan kommandot!<br />
+                                                    Om du ser texten "Hej, v&auml;rlden!" gjorde du r&auml;tt och koden fungerar! Om du inte fick r&auml;tt utput, g&aring; tillbaka och kolla om du gjort ett stavfel.
                                                 </p>
                                                 <div class="callout-block callout-info">
                                                     <div class="icon-holder">
@@ -117,7 +117,7 @@
                                                     <!--//icon-holder-->
                                                     <div class="content">
                                                         <h4 class="callout-title">Gratulerar</h4>
-                                                        <p>Du har nu gjort ditt f&ouml;rsta Enkeltprogram! Du kan nu g&aring; till den kompletta dokumentationen f&ouml;r att l&auml;ra dig mera</p>
+                                                        <p>Du har nu skrivit ditt f&ouml;rsta Enkelt-program! Du kan nu g&aring; till den kompletta dokumentationen f&ouml;r att l&auml;ra dig mer</p>
                                                     </div>
                                                     <!--//content-->
                                                 </div>
@@ -136,10 +136,10 @@
                                 <div id="doc-nav" class="doc-nav">
                                     <nav id="doc-menu" class="nav doc-menu flex-column sticky">
                                         <a class="scrollto" href="#download-section">Ladda ner Enkelt</a>
-                                        <a class="nav-link scrollto" href="#installation-section">Att andv&auml;nda Enkelt</a>
+                                        <a class="nav-link scrollto" href="#installation-section">Att anv&auml;nda Enkelt</a>
                                         <nav class="doc-sub-menu nav flex-column">
                                             <a class="nav-link scrollto" href="#step1">K&ouml;r Enkelt</a>
-                                            <a class="nav-link scrollto" href="#step2">Enkelt filtypen</a>
+                                            <a class="nav-link scrollto" href="#step2">Enkelts filtyp</a>
                                         </nav>
                                         <!--//nav-->
                                         <a class="nav-link scrollto" href="#code-section">Hej V&auml;rlden i Enkelt</a>
