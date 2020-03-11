@@ -32,9 +32,9 @@
 
     <script type="text/python" src="enkelt.py" crossorigin="anonymous"></script>
 
-    <div class="wrapper">
+    <div class="wrapper" id="wrapper">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="https://enkelt.ml"><img src="logo.png" height="50px" width="auto" alt="Enkelt"> Enkelt</a>
+			<a class="navbar-brand" href="logo.png"><img src="logo.png" height="50px" width="auto" alt="Enkelt"> Enkelt</a>
 	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	            <span class="navbar-toggler-icon"></span>
 	        </button>
@@ -86,100 +86,33 @@
 		        </div>
 		        <div class="card" id="outputCard">
 		            <div class="card-body" id="run">
-			            <div class="card-title">
-				            <h5 class="card-title">Utdata</h5>
-			            </div>
+						<div class="card-title">
+							<div class="row">
+								<div class="col">
+									<h5 class="card-title">Utdata</h5>
+								</div>
+								<div class="col">
+									<ul class="nav nav-pills justify-content-end">
+										<li class="nav-item">
+											<a class="btn btn-info" style="opacity: 0 !important;"></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<hr>
+						</div>
 			            <hr>
 		                <div id="myLog" style="font-family: monospace; font-size: 25px; margin-top: 5px;">
 		                    <div id="consoleText"></div>
 		                </div>
 		            </div>
-			        <div id="mini_footer"><p>&copy; 2019 Edvard Busck-Nielsen</p></div>
+			        <div id="mini_footer"><p>&copy; 2020 Edvard Busck-Nielsen</p></div>
 		        </div>
 		    </div>
 	    </div>
-	    
-	    <br>
-	    <br>
-	    <br>
-	    <br>
     </div>
-    <div class="push"></div>
-    <!-- Footer -->
-	<footer class="page-footer font-small pt-4">
-		<!-- Footer Links -->
-	    <div class="container-fluid text-center text-md-left">
-	
-	    <!-- Grid row -->
-	    <div class="row">
-		    
-		    <!-- Grid column -->
-	        <div class="col-md-6 mt-md-0 mt-3">
-	
-		        <!-- Content -->
-		        <h5 class="text-uppercase">Enkelt</h5>
-		        <p>Enkelt är världens första svenska programeringsspråk.</p>
-		        <p>Det här är Enkelts webbredigerare var du kan skriva och köra Enkelt-kod utan att ladda ner något!</p>
-	
-	        </div>
-	        <!-- Grid column -->
-	
-	        <hr class="clearfix w-100 d-md-none pb-3">
-	
-	        <!-- Grid column -->
-	        <div class="col-md-3 mb-md-0 mb-3">
-	
-	            <!-- Links -->
-	            <h5 class="text-uppercase">Information & Hjälp</h5>
-	
-	            <ul class="list-unstyled">
-		            <li>
-		                <a href="https://enkelt.io">Enkelts webbsida</a>
-		            </li>
-		            <li>
-		                <a href="https://enkelt.io/dokumentation">Enkelts dokumentation</a>
-		            </li>
-		            <li>
-		                <a href="https://enkelt.io/start">Enkelt snabbstart</a>
-		            </li>
-		            <li>
-		                <a href="https://bibliotek.enkelt.io">Enkelt bibliotek</a>
-		            </li>
-	            </ul>
-	
-	        </div>
-	        <!-- Grid column -->
-	
-	        <!-- Grid column -->
-	        <div class="col-md-3 mb-md-0 mb-3">
-	
-	            <!-- Links -->
-	            <h5 class="text-uppercase">Kontakt mm.</h5>
-	
-	            <ul class="list-unstyled">
-		            <li>
-		                <a href="https://github.com/Enkelt">GitHub</a>
-		            </li>
-		            <li>
-		                <a href="mailto:enkelt.kontakt@gmail.com">Email</a>
-		            </li>
-                </ul>
-	
-	        </div>
-	        <!-- Grid column -->
-	
-	    </div>
-	    <!-- Grid row -->
-	
-	  </div>
-	  <!-- Footer Links -->
-		<!-- Copyright -->
-	    <div class="footer-copyright text-center py-3">&copy; 2019 Edvard Busck-Nielsen</div>
-	     <!-- Copyright -->
-	</footer>
-	<!-- Footer -->
-	   
-    <button onclick="topFunction()" id="gotToTopButton"><em class="fa fa-chevron-up"></em></button>
+
+	<div class="push"></div>
     
     <p id="outputCount" style="display: none;">0</p>
     <p id="old_outputCount" style="display: none;">0</p>
@@ -207,26 +140,7 @@
 		        runCode();
 		    }
 		};
-		    </script>
-    
-    <script>
-	    // When the user scrolls down 20px from the top of the document, show the button
-		window.onscroll = function() {scrollFunction()};
-		
-		function scrollFunction() {
-		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		    document.getElementById("gotToTopButton").style.display = "block";
-		  } else {
-		    document.getElementById("gotToTopButton").style.display = "none";
-		  }
-		}
-		
-		// When the user clicks on the button, scroll to the top of the document
-		function topFunction() {
-		  document.body.scrollTop = 0; // For Safari
-		  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-		}
-    </script>
+	</script>
     
     <script>
         window.console = {

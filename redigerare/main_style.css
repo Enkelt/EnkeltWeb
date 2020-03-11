@@ -1,16 +1,18 @@
 html {
 	scroll-behavior: smooth;
-	height: 100%;
 }
 
 body {
 	font-family: 'Open Sans', sans-serif !important;
-	height: 100%;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	overflow-y: hidden;
 }
 
 .wrapper {
-	min-height: 100%;
-	margin-bottom: 10px;
+	height: 100%;
+	overflow-y: scroll;
 }
 
 #cardsRow {
@@ -52,11 +54,12 @@ body {
 	font-size: 20px;
 	width: 100%;
 	min-height: 100%;
-	border-left: 1px solid #9f9f9f;
-	border-top: 1px solid #9f9f9f;
-	border-bottom: 1px solid #fff;
-	border-right: 1px solid #fff;
+	border: none;
+	border-left: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	border-radius: 2px;
 	resize: none;
+	padding: 5px;
 }
 
 #inputCode:focus {
@@ -99,7 +102,6 @@ body {
 }
 
 #mini_footer {
-	display: none;
 	font-size: 10px;
 	color: #1f1f1f;
 	padding: 5px;
@@ -135,13 +137,5 @@ body {
     
     #inputCode {
 	    font-size: 17px;
-    }
-    
-    footer {
-	    display: none !important;
-    }
-    
-    #mini_footer {
-	    display: block;
     }
 }
