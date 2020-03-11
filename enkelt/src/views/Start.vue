@@ -8,7 +8,7 @@
                 <div class="doc-wrapper">
                     <div class="container">
                         <div id="doc-header" class="doc-header text-center">
-                            <h1 class="doc-title">Snabbstart</h1>
+                            <h1 class="doc-title"><span aria-hidden="true" class="icon icon_lightbulb"></span>Snabbstart</h1>
                             <div class="meta">Senast uppdaterad: Aug 03, 2019</div>
                         </div>
                         <!--//doc-header-->

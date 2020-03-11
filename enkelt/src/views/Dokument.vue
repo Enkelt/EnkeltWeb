@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="body-blue">
         <div id="app-dokument">
             <ScrollToTopBtn></ScrollToTopBtn>
             <div class="page-wrapper">

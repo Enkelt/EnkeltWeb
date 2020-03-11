@@ -1449,6 +1449,30 @@ select {
     color: #8A40A7;
 }
 
+.cards-section .item-teal .item-inner {
+    border-top: 3px solid #4db6ac;
+}
+
+.cards-section .item-teal .item-inner:hover .title {
+    color: #26a69a;
+}
+
+.cards-section .item-teal .icon {
+    color: #009688;
+}
+
+.cards-section .item-dark .item-inner {
+    border-top: 3px solid #424242;
+}
+
+.cards-section .item-dark .item-inner:hover .title {
+    color: #616161;
+}
+
+.cards-section .item-dark .icon {
+    color: #212121;
+}
+
 @media (max-width: 575.98px) {
     .main-search-box {
         width: 100%;

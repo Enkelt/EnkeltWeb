@@ -7,7 +7,7 @@
                 <div class="doc-wrapper">
                     <div class="container">
                         <div id="doc-header" class="doc-header text-center">
-                            <h1 class="doc-title"><span aria-hidden="true" class="icon icon_lifesaver"></span> Tidslinje</h1>
+                            <h1 class="doc-title"><span aria-hidden="true" class="icon icon_datareport_alt"></span> Tidslinje</h1>
                             <div class="meta"><em class="far fa-clock"></em> Senast uppdaterad: Aug 10, 2019</div>
                         </div><!--//doc-header-->
                         <div class="doc-body row">

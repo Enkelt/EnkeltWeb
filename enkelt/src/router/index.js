@@ -8,6 +8,7 @@ import Tidslinje from "../views/Tidslinje";
 import Licens from "../views/Licens";
 import FourOhFour from "../views/FourOhFour";
 import PrivacyPolicy from "../views/PrivacyPolicy";
+import About from "../views/About";
 
 Vue.use(VueRouter);
 
@@ -51,6 +52,11 @@ const routes = [
         path: '/sekretess',
         name: 'PrivacyPolicy',
         component: PrivacyPolicy
+    },
+    {
+        path: '/om',
+        name: 'About',
+        component: About
     }
 ];
 

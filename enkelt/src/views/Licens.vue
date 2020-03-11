@@ -24,12 +24,12 @@
                                                 <p>GNU GPL Licensen är en så kallad copyleftlicens. Det betyder att alla bearbetningar av ett verk måste publiceras under samma licens. Om du använder kod från två olika verk som är försedda med olika licenser, men med villkoret copyleft, kan du alltså inte kombinera dem i ditt nya program. Detta eftersom du då inte kan följa kravet på att distribuera den bearbetade versionen under samma licens.</p>
                                                 <p>GNU GPL Licensen är en så kallad copyleftlicens. Det betyder att alla bearbetningar av ett verk måste publiceras under samma licens. Om du använder kod från två olika verk som är försedda med olika licenser, men med villkoret copyleft, kan du alltså inte kombinera dem i ditt nya program. Detta eftersom du då inte kan följa kravet på att distribuera den bearbetade versionen under samma licens.</p>
                                                 <div class="author-profile text-center">
-                                                    <a class="center-block" href="https://enkelt.io" target="_blank"><img src="../assets/logo.png" alt="Enkelt Logo"></a>
+                                                    <a class="center-block" href="/"><img src="../assets/logo.png" alt="Enkelt"></a>
                                                 </div><!--//author-profile-->
                                                 <div class="speech-bubble text-center">
-                                                    <h3 class="speech-title">Läs mera om GNU GPL Licensen</h3>
+                                                    <h3 class="speech-title">Läs mer om GNU GPL -licensen</h3>
                                                     
-                                                    <p>Du kan läsa mera om vad GNU GPL (v.3) licensen innebär och vad den betyder för Enkelt projektet på <a href="http://gnu.org">www.gnu.org</a></p>
+                                                    <p>Du kan läsa mer om vad GNU GPL (v.3) -licensen innebär och vad den betyder för Enkelt-projektet på <a href="http://gnu.org">www.gnu.org</a></p>
                                                 </div>
                                             </div><!--//jumbotron-->
                                         </div><!--//section-block-->

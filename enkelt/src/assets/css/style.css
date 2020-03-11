@@ -123,8 +123,8 @@ input[type=submit]:hover {
     color: #fff !important;
 }
 
-.btn-cta:not(.main_button) {
-    color: var(--info) !important;
+.btn-cta:not(.main_button):not(.btn-blue) {
+    color: var(--light) !important;
 }
 
 .promo-block .btn-cta {

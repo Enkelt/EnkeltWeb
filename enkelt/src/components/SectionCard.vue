@@ -14,7 +14,32 @@
 <script>
     export default {
         name: 'SectionCard',
-        props: ['color', 'icon', 'title', 'description', 'link']
+        props: {
+            color: {
+                type: String,
+                default: 'primary'
+            },
+            icon: {
+                type: String,
+                default: ''
+            },
+            title: {
+                type: String,
+                default: 'Enkelt'
+            },
+            description: {
+                type: String,
+                default: ''
+            },
+            link: {
+                type: String,
+                default: '/'
+            },
+            disabled: {
+                type: String,
+                default: ''
+            },
+        },
     }
 </script>
 

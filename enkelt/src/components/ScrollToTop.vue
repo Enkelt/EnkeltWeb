@@ -1,5 +1,5 @@
 <template>
-    <a href="#header" id="to_top_btn" class="scrollto">
+    <a href="#" id="to_top_btn" class="scrollto">
         <em class="fa fa-chevron-up"></em>
     </a>
 </template>

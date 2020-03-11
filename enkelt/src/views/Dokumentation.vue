@@ -7,7 +7,7 @@
                 <div class="doc-wrapper">
                     <div class="container">
                         <div id="doc-header" class="doc-header text-center">
-                            <h1 class="doc-title">Dokumentation</h1>
+                            <h1 class="doc-title"><span aria-hidden="true" class="icon icon_puzzle_alt"></span>Dokumentation</h1>
                             <div class="meta">Senast uppdaterad: Mars 9, 2020</div>
                             <br>
                             <div class="main-search-box pt-sm-0 pb-sm-0">

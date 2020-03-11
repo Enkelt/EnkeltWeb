@@ -17,9 +17,25 @@
                 description="Hela språkets kompletta dokumentation."
                 link="/dokumentation">
             </section-card>
-            
+    
             <section-card
                     color="primary"
+                    icon="question_alt"
+                    title="Om Enkelt"
+                    description="Läs mer om Enkelt-projektet"
+                    link="/om">
+            </section-card>
+    
+            <section-card
+                    color="teal"
+                    icon="pencil"
+                    title="Webbredigeraren"
+                    description="Kör Enkelt-kod i webbläsaren utan att ladda ner något."
+                    link="https://redigerare.enkelt.io">
+            </section-card>
+    
+            <section-card
+                    color="red"
                     icon="archive"
                     title="Bibliotek"
                     description="Utforska och dela bibliotek för Enkelt."
@@ -49,6 +65,15 @@
                     description="Läs mera om licensen Enkelt använder."
                     link="/licens">
             </section-card>
+    
+<!--            <section-card-->
+<!--                    color="dark"-->
+<!--                    icon="cogs"-->
+<!--                    title="API"-->
+<!--                    description="Enkelts API-dokumentation"-->
+<!--                    link="/api"-->
+<!--                    disabled="true">-->
+<!--            </section-card>-->
         </div><!--//cards-->
     </main>
 </template>
