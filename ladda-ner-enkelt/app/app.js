@@ -4,9 +4,9 @@
 * License: MIT License                                     *
 ***********************************************************/
 
-var siteHeaderText = {};
+let siteHeaderText = {};
 
-var downGit = angular.module('downGit', [
+let downGit = angular.module('downGit', [
     'ngRoute',
     'homeModule',
     'toastr',

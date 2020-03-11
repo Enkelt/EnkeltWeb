@@ -1,5 +1,4 @@
-# LaddaNerEnkelt
-Ladda ner den nyaste versionen av Enkelt programmeringsspråket
-Detta projekt är bara en weebsida som laddar ner enkelt du kan inte ladda ner enekelt rakt från denna webbsida du måste gå via en länk från Enkelts webbsida: [här](https://enkelt.io)
+# Ladda Ner Enkelt
 
-Edvard Busck-Nielsen 2019
+This website downloads the newest version of the Enkelt programming language.
+You can find the main website at [enkelt.io](https://enkelt.io)

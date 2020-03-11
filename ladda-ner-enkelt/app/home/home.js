@@ -4,7 +4,7 @@
 * License: MIT License                                     *
 ***********************************************************/
 
-var homeModule = angular.module('homeModule', [
+let homeModule = angular.module('homeModule', [
     'ngRoute',
     'downGitModule',
 ]);
@@ -30,33 +30,34 @@ homeModule.config([
                     $scope.downloadedFiles = {val: 0};
                     $scope.totalFiles = {val: 0};
 
-                    var templateUrl = "https?://github.com/.+/.+";
-                    var downloadUrlInfix = "#/home?url=";
-                    var downloadUrlPrefix = "https://minhaskamal.github.io/DownGit/"+downloadUrlInfix;
+                    let templateUrl = "https?://github.com/.+/.+";
+                    let downloadUrlInfix = "#/home?url=";
+                    let downloadUrlPrefix = "https://minhaskamal.github.io/DownGit/"+downloadUrlInfix;
 
                     if ($routeParams.url) {
                         $scope.url = $routeParams.url;
                     }
 
                     if ($scope.url.match(templateUrl)) {
-                        var parameter = {
+                        let parameter = {
                             url: $routeParams.url,
                             fileName: $routeParams.fileName,
                             rootDirectory: $routeParams.rootDirectory
                         };
-                        var progress = {
+                        let progress = {
                             isProcessing: $scope.isProcessing,
                             downloadedFiles: $scope.downloadedFiles,
                             totalFiles: $scope.totalFiles
                         };
                         downGitService.downloadZippedFiles(parameter, progress, toastr);
 
-                    } else if ($scope.url != "") {
-                        toastr.warning("Invalid URL!", {iconClass: 'toast-down'});
+                    } else if ($scope.url !== "") {
+                        toastr.warning("Oj, något gick fel!", {iconClass: 'toast-down'});
+                        window.location = 'https://enkelt.io'
                     }
 
                     $scope.catchEnter = function(keyEvent) {
-                        if (keyEvent.which == 13) {
+                        if (keyEvent.which === 13) {
                             $scope.download();
                         }
                     };
@@ -71,7 +72,8 @@ homeModule.config([
                         if ($scope.url.match(templateUrl)) {
                             $scope.downUrl = downloadUrlPrefix + $scope.url;
                         } else {
-                            toastr.warning("Invalid URL!", {iconClass: 'toast-down'});
+                            toastr.warning("Oj, något gick fel!", {iconClass: 'toast-down'});
+                            window.location = 'https://enkelt.io'
                         }
                     };
 

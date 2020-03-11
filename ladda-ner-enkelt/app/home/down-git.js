@@ -1,10 +1,10 @@
 /***********************************************************
 * Developer: Edvard Busck-Nielsen (@buscedv)       *
-* Website: https://github.com/Buscedv/Enkelt          *
+* Website: https://enkelt.io          *
 * License: MIT License                                     *
 ***********************************************************/
 
-var downGitModule = angular.module('downGitModule', [
+let downGitModule = angular.module('downGitModule', [
 ]);
 
 downGitModule.factory('downGitService', [
@@ -12,12 +12,12 @@ downGitModule.factory('downGitService', [
     '$q',
 
     function ($http, $q) {
-        var repoInfo = {};
+        let repoInfo = {};
 
-        var parseInfo = function(parameters) {
-            var repoPath = new URL(parameters.url).pathname;
-            var splitPath = repoPath.split("/");
-            var info = {};
+        let parseInfo = function(parameters) {
+            let repoPath = new URL(parameters.url).pathname;
+            let splitPath = repoPath.split("/");
+            let info = {};
 
             info.author = splitPath[1];
             info.repository = splitPath[2];
@@ -33,17 +33,17 @@ downGitModule.factory('downGitService', [
                 info.author+"/"+info.repository+"/contents/";
             info.urlPostfix = "?ref="+info.branch;
 
-            if(!parameters.fileName || parameters.fileName==""){
+            if(!parameters.fileName || parameters.fileName === ""){
                 info.downloadFileName = info.rootName;
             } else{
                 info.downloadFileName = parameters.fileName;
             }
 
-            if(parameters.rootDirectory=="false"){
+            if(parameters.rootDirectory === "false"){
                 info.rootDirectoryName = "";
 
-            } else if(!parameters.rootDirectory || parameters.rootDirectory=="" ||
-                parameters.rootDirectory=="true"){
+            } else if(!parameters.rootDirectory || parameters.rootDirectory === "" ||
+                parameters.rootDirectory === "true"){
                 info.rootDirectoryName = info.rootName+"/";
 
             } else{
@@ -51,23 +51,23 @@ downGitModule.factory('downGitService', [
             }
 
             return info;
-        }
+        };
 
-        var downloadDir = function(progress){
+        let downloadDir = function(progress){
             progress.isProcessing.val = true;
 
-            var dirPaths = [];
-            var files = [];
-            var requestedPromises = [];
+            let dirPaths = [];
+            let files = [];
+            let requestedPromises = [];
 
             dirPaths.push(repoInfo.resPath);
             mapFileAndDirectory(dirPaths, files, requestedPromises, progress);
-        }
+        };
 
-        var mapFileAndDirectory = function(dirPaths, files, requestedPromises, progress){
+        let mapFileAndDirectory = function(dirPaths, files, requestedPromises, progress){
             $http.get(repoInfo.urlPrefix+dirPaths.pop()+repoInfo.urlPostfix).then(function(response) {
-                for(var i=response.data.length-1; i>=0; i--){
-                    if(response.data[i].type=="dir"){
+                for(let i=response.data.length-1; i>=0; i--){
+                    if(response.data[i].type === "dir"){
                         dirPaths.push(response.data[i].path);
 
                     } else{
@@ -88,12 +88,12 @@ downGitModule.factory('downGitService', [
                     mapFileAndDirectory(dirPaths, files, requestedPromises, progress);
                 }
             });
-        }
+        };
 
-        var downloadFiles = function(files, requestedPromises, progress){
-            var zip = new JSZip();
+        let downloadFiles = function(files, requestedPromises, progress){
+            let zip = new JSZip();
             $q.all(requestedPromises).then(function(data) {
-                for(var i=files.length-1; i>=0; i--){
+                for(let i=files.length-1; i>=0; i--){
                     zip.file(
                         repoInfo.rootDirectoryName+files[i].path.substring(decodeURI(repoInfo.resPath).length+1),
                         files[i].data
@@ -105,10 +105,10 @@ downGitModule.factory('downGitService', [
                     saveAs(content, repoInfo.downloadFileName+".zip");
                 });
             });
-        }
+        };
 
-        var getFile = function (path, url, files, requestedPromises, progress) {
-            var promise = $http.get(url, {responseType: "arraybuffer"}).then(function (file) {
+        let getFile = function (path, url, files, requestedPromises, progress) {
+            let promise = $http.get(url, {responseType: "arraybuffer"}).then(function (file) {
                 files.push({path:path, data:file.data});
                 progress.downloadedFiles.val = files.length;
             }, function(error) {
@@ -119,12 +119,12 @@ downGitModule.factory('downGitService', [
             progress.totalFiles.val = requestedPromises.length;
         }
 
-        var downloadFile = function (url, progress, toastr) {
+        let downloadFile = function (url, progress, toastr) {
             progress.isProcessing.val=true;
             progress.downloadedFiles.val = 0;
             progress.totalFiles.val = 1;
 
-            var zip = new JSZip();
+            let zip = new JSZip();
             $http.get(url, {responseType: "arraybuffer"}).then(function (file) {
                 progress.downloadedFiles.val = 1;
                 zip.file(repoInfo.rootName, file.data);
@@ -144,17 +144,16 @@ downGitModule.factory('downGitService', [
             downloadZippedFiles: function(parameters, progress, toastr) {
                 repoInfo = parseInfo(parameters);
 
-                if(!repoInfo.resPath || repoInfo.resPath==""){
-                    if(!repoInfo.branch || repoInfo.branch==""){
+                if(!repoInfo.resPath || repoInfo.resPath === ""){
+                    if(!repoInfo.branch || repoInfo.branch === ""){
                         repoInfo.branch="master";
                     }
 
-                    var downloadUrl = "https://github.com/"+repoInfo.author+"/"+
-                        repoInfo.repository+"/archive/"+repoInfo.branch+".zip";
+                    var downloadUrl = "https://github.com/"+repoInfo.author+"/"+ repoInfo.repository+"/archive/"+repoInfo.branch+".zip";
 
                     window.location = downloadUrl;
 
-                }else{
+                } else {
                     $http.get(repoInfo.urlPrefix+repoInfo.resPath+repoInfo.urlPostfix).then(function(response) {
                         if(response.data instanceof Array){
                             downloadDir(progress);
