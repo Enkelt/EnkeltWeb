@@ -11,7 +11,7 @@
                 </div>
             </div><!--//branding-->
             <div class="tagline">
-                <p>Programmera på svenska med Enkelt, världens första programmeringsspråk med en svensk syntax</p>
+                <p>Enkelt är världens första svenskspråkiga programmeringsspråk. och det perfekta valet för programmeringsundervisning på svenska.</p>
                 <p v-text="'v.' + version"></p>
                 <p></p>
             
