@@ -16,8 +16,8 @@
                     <div class="content-holder col-lg-7 col-md-6 col-12">
                         <div class="content-holder-inner">
                             <div class="desc">
-                                <h2 class="section-title"><strong>Enkelt bibiliotek</strong></h2>
-                                <h5>Enkelt bibliotek är en plats där man kan dela med sig av sina bibliotek och hitta nya att experimentera med.</h5>
+                                <h2 class="section-title"><strong>Enkelt-bibiliotek</strong></h2>
+                                <h5>Enkelt-bibliotek är en webbsida där man kan dela med sig av sina bibliotek och hitta nya att experimentera med.</h5>
                                 <br>
                                 <h4 class="content-title">Så här enkelt är det:</h4>
                                 <br>
