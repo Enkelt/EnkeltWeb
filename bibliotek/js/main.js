@@ -61,7 +61,7 @@ let app = new Vue({
 			let api_url = "https://enkeltapi.firebaseio.com/bibliotek/data.json";
 			
 			let Httpreq = new XMLHttpRequest(); // a new request
-		    Httpreq.open("GET",api_url, false);
+		    Httpreq.open("GET",api_url, true);
 		    Httpreq.send(null);
 
 		    let json_obj = Httpreq.responseText;
