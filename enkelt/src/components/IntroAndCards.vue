@@ -65,15 +65,6 @@
                     description="Läs mera om licensen Enkelt använder."
                     link="/licens">
             </section-card>
-    
-<!--            <section-card-->
-<!--                    color="dark"-->
-<!--                    icon="cogs"-->
-<!--                    title="API"-->
-<!--                    description="Enkelts API-dokumentation"-->
-<!--                    link="/api"-->
-<!--                    disabled="true">-->
-<!--            </section-card>-->
         </div><!--//cards-->
     </main>
 </template>

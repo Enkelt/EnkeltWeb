@@ -16,12 +16,12 @@
                                         <h2 class="section-title">Om Enkelt</h2>
                                         <div class="section-block">
                                             <div class="jumbotron text-left">
-                                                <h3>Vad är Enkelt?</h3>
+                                                <h3 id="vad-ar-enkelt">Vad är Enkelt?</h3>
                                                 <p>Enkelt är ett programmeringsspråk som till 100% fungerar på svenenska, det betyder att alla nyckelord, funktionsnamn, etc... är på svenska. Enkelt är det enda programmeringsspråket i världen som är <strong>skrivet</strong> och på svenska, det finns språk som fungerar <em>visuellt</em> (som scratch) med det är inte samma sak.
                                                 Detta gör Enkelt till det perfekta valet då man vill undervisa programmering i svenskspårkiga skolor. Idéen med programmeringssundervisning är att lära ut <em>koncepten</em> och inte specifikt ett programmeringsspråk och då fungerar Enkelt absolut bäst. Enkelt ger en realistisk bild av hur programmering fungerar och eftersom språket fungerar på samma sätt som andra programmeringsspråk som t.ex. Python och JavaScript är det lätt för elever att fortsätta med andra språk om intresset finns.
                                                 </p>
                                                 <br>
-                                                <h3>Hur används Enkelt?</h3>
+                                                <h3 id="hur-anvands-enkelt">Hur används Enkelt?</h3>
                                                 <p>Enkelt går att använda på två olika sätt:</p>
                                                 <p><strong>1.</strong> Nedladdat: Man kan ladda ner Enkelt som ett Python-skript (enkelt.py) och då körs koden via Terminalen eller Kommandotolken. Läs mer i <a href="/start">snabbstarten</a></p>
                                                 <p><strong>2.</strong> Webbredigeraren: Enkelt har en redigerare som är helt och hållet webb-baserad, det betyder att man inte behöver ladda ner något för att använda den. Gå bara till <a href="https://redigerare.enkelt.io" target="_blank">redigerare.enkelt.io</a> och börja koda direkt!</p>
@@ -80,6 +80,10 @@
                                 <div id="doc-nav" class="doc-nav">
                                     <nav id="doc-menu" class="nav doc-menu flex-column sticky">
                                         <a class="nav-link scrollto" href="#om-enkelt">Om Enkelt</a>
+                                        <nav class="doc-sub-menu nav flex-column">
+                                            <a class="nav-link scrollto" href="#vad-ar-enkelt">Vad är Enkelt?</a>
+                                            <a class="nav-link scrollto" href="#hur-anvands-enkelt">Hur används Enkelt?</a>
+                                        </nav>
                                         <a class="nav-link scrollto" href="#bakgrund">Bakgrund</a>
                                         <a class="nav-link scrollto" href="#hur-fungerar-enkelt">Hur fungerar Enkelt?</a>
                                     </nav><!--//doc-menu-->

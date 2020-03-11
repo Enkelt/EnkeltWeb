@@ -24,9 +24,8 @@
                                                 - Introduktion<br>
                                                 - Teknisk information<br>
                                             </p>
-                                            <a class="scrollto btn btn-blue btn-cta" href="#theme-start">Börja nu</a>
                                         </div><!--//jumbotron-->
-                                        <h2 id="theme-start" class="section-title">Guider & Dokumentation</h2>
+                                        <h2 id="dokument-start" class="section-title">Guider & Dokumentation</h2>
                                         <div class="section-block">
                                             <div class="row">
                                                 <div class="col-md-4 col-12 mb-3">
@@ -64,7 +63,7 @@
                                     </section><!--//doc-section-->
                                     
                                     <section id="free-themes" class="doc-section">
-                                        <h2 class="section-title">Andra Dokument</h2>
+                                        <h2 class="section-title">Andra Dokument (Arkiv)</h2>
                                         <div class="section-block">
                                             <div class="row">
                                                 <div class="col-md-4 col-12 mb-3">
@@ -82,7 +81,7 @@
                                                         <a href="https://docs.google.com/document/d/1MtPsbh2p5Gs9_EiyUOrHw0W9f0bt7ZiGtm-OPyB6DzY/edit?usp=sharing" target="_blank"><img class="img-fluid" src="../assets/images/tekniskinformation.png" alt="Teknisk Information" /></a>
                                                         <div class="card-block">
                                                             <h4 class="card-title">Teknisk information</h4>
-                                                            <p class="card-text">Lär dig mera om hur Enkelt fungerar bakom kulisserna.</p>
+                                                            <p class="card-text">Lär dig mera om hur Enkelt fungerar bakom kulisserna. OBS! Enkelt 2.6</p>
                                                         </div><!--//card-block-->
                                                         <a class="mask" href="https://docs.google.com/document/d/1MtPsbh2p5Gs9_EiyUOrHw0W9f0bt7ZiGtm-OPyB6DzY/edit?usp=sharing" target="_blank"><em class="icon fa fa-file"></em></a>
                                                     </div><!--//theme-card-->
@@ -107,7 +106,7 @@
                                 <div id="doc-nav" class="doc-nav">
                                     <nav id="doc-menu" class="nav doc-menu flex-column sticky">
                                         <a class="nav-link scrollto" href="#premium-themes">Guider & Dokumentation</a>
-                                        <a class="nav-link scrollto" href="#free-themes">Andra Dokument</a>
+                                        <a class="nav-link scrollto" href="#free-themes">Andra Dokument (Arkiv)</a>
                                     </nav><!--//doc-menu-->
                                 </div>
                             </div><!--//doc-sidebar-->
