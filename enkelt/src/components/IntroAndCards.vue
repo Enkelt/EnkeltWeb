@@ -54,7 +54,7 @@
                     color="purple"
                     icon="datareport_alt"
                     title="Tidslinje"
-                    description="Följ med utvecklingen av Enkelt och se hur projektet evloverat."
+                    description="Följ med utvecklingen av Enkelt och se hur projektet evolverat."
                     link="/tidslinje">
             </section-card>
     

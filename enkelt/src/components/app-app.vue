@@ -5,9 +5,9 @@
                 <br>
                 <br>
                 <br>
-                <h5 class="content-title"><strong> Enkelt har en Android app på Google Play!</strong></h5>
+                <h5 class="content-title"><strong> Enkelt har en Android-app på Google Play!</strong></h5>
                 <p>Appen inehåller allt som finns på den här webbsidan i ett praktiskt format så du snabbt kan kolla up saker på din telefon eller tablet.</p>
-                <p><strong class="highlight">[Klicka på länken eller skanna QR-koden för att ladda ner den:]</strong></p>
+                <p><strong class="highlight">(Klicka på länken eller skanna QR-koden för att ladda ner den)</strong></p>
                 <br>
                 <img src="../assets/images/enkeltqr.png" alt="Enkelt app QR" id="qr_res">
                 <br>
@@ -34,5 +34,7 @@
 </script>
 
 <style scoped>
-
+    .btn-cta {
+        color: var(--info) !important;
+    }
 </style>

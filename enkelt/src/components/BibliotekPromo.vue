@@ -42,4 +42,8 @@
     }
 </script>
 
-<style scoped></style>
+<style scoped>
+    .btn-cta {
+        color: var(--light) !important;
+    }
+</style>
