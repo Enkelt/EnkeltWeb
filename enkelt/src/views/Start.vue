@@ -9,7 +9,7 @@
                     <div class="container">
                         <div id="doc-header" class="doc-header text-center">
                             <h1 class="doc-title"><span aria-hidden="true" class="icon icon_lightbulb"></span>Snabbstart</h1>
-                            <div class="meta">Senast uppdaterad: Aug 03, 2019</div>
+                            <div class="meta">Senast uppdaterad: Mars 13, 2019</div>
                         </div>
                         <!--//doc-header-->
                         <div class="doc-body row">
@@ -18,11 +18,11 @@
                                     <section id="download-section" class="doc-section">
                                         <h2 class="section-title">Ladda ner Enkelt</h2>
                                         <div class="section-block">
-                                            <p>Du m&aring;ste b&ouml;rja med att ladda ner Enkelt. Klicka p&aring; den gr&ouml;na knappen nedtill f&ouml;r att b&ouml;rja nerladdningen. Enkelt kan andv&auml;ndas p&aring;
-                                                <em>Mac OSX, Windows och Linux</em>. F&ouml;r att kunna andv&auml;nda Enkelt m&aring;ste du &auml;ven ha tillg&aring;ng till
+                                            <p>Du måste börja med att ladda ner Enkelt. Klicka på den gröna knappen nedtill fär att starta nedladdningen. Enkelt kan användas på:
+                                                <em>Mac OSX, Windows pch Linux</em>. För att kunna använda Enkelt måste du även ha tillgång till
                                                 <strong>Terminal</strong> (Mac, Linux) eller
                                                 <strong>Kommandotolken</strong> (Windows) samt ha
-                                                <strong>Python</strong> (v. 3 eller h&ouml;gre) installerat.
+                                                <strong>Python</strong> (v. 3 eller högre) installerat.
                                             </p>
                                             <a class="btn btn-green" :href="download_link" target="_blank" rel="noopener"> Ladda ner Enkelt</a>
                                             <br>
