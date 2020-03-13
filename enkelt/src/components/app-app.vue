@@ -12,7 +12,7 @@
                 <img src="../assets/images/enkeltqr.png" alt="Enkelt app QR" id="qr_res">
                 <br>
                 <br>
-                <a class="btn btn-cta" :href="link" target="_blank"><em class="fas fa-external-link-alt"></em> Öppna i Google Play</a>
+                <a class="btn" :href="link" target="_blank"><em class="fas fa-external-link-alt"></em> Öppna i Google Play</a>
                 <a href='https://play.google.com/store/apps/details?id=io.buscedv.enkelt&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Ladda ned på Google Play' id="google_res" src='https://play.google.com/intl/en_us/badges/images/generic/sv_badge_web_generic.png'/></a>
                 <br>
                 <br>
@@ -34,7 +34,10 @@
 </script>
 
 <style scoped>
-    .btn-cta {
+    .btn {
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
         color: var(--info) !important;
     }
 </style>

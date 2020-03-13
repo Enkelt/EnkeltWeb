@@ -111,7 +111,7 @@
         name: 'About',
         components: {AppPageHeader, ScrollToTopBtn, Testa, AppFooterImg, AppFooter},
         mounted() {
-            document.title = 'Enkelt - Om Enkelt'
+            document.title = 'Enkelt - Om Enkelt';
         }
     }
 </script>
