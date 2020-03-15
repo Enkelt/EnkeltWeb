@@ -8772,7 +8772,7 @@ var mod_name=module.__name__,module_contents=$download_module(module,path,$packa
 module.$src=module_contents
 $B.imported[mod_name].$is_package=module.$is_package
 $B.imported[mod_name].$last_modified=module.$last_modified
-if(path.substr(path.length-12)=="/__init__.py"){$B.imported[mod_name].__package__=mod_name
+if(path.substr(path.length-12)=="/app.py"){$B.imported[mod_name].__package__=mod_name
 $B.imported[mod_name].__path__=path
 $B.imported[mod_name].$is_package=module.$is_package=true}else if($package){$B.imported[mod_name].__package__=$package}else{var mod_elts=mod_name.split(".")
 mod_elts.pop()
@@ -8838,7 +8838,7 @@ delete modobj.__spec__["loader_state"]
 var ext=stored[0],module_contents=stored[1],imports=stored[2]
 modobj.$is_package=stored[3]||false
 var path=$B.brython_path+"Lib/"+modobj.__name__
-if(modobj.$is_package){path+="/__init__.py"}
+if(modobj.$is_package){path+="/app.py"}
 modobj.__file__=path
 if(ext=='.js'){run_js(module_contents,modobj.__path__,modobj)}else if($B.precompiled.hasOwnProperty(modobj.__name__)){var parts=modobj.__name__.split(".")
 for(var i=0;i < parts.length;i++){var parent=parts.slice(0,i+1).join(".")
@@ -8901,7 +8901,7 @@ if(elts.length > 1){elts.pop()
 var $package=$B.stdlib[elts.join(".")]
 if($package && $package[1]){address=["py"]}}}
 if(address !==undefined){var ext=address[0],is_pkg=address[1]!==undefined,path=$B.brython_path+((ext=="py")? "Lib/" :"libs/")+
-fullname.replace(/\./g,"/"),metadata={ext:ext,is_package:is_pkg,path:path+(is_pkg? "/__init__.py" :
+fullname.replace(/\./g,"/"),metadata={ext:ext,is_package:is_pkg,path:path+(is_pkg? "/app.py" :
 ((ext=="py")? ".py" :".js")),address:address}
 var res=new_spec({name :fullname,loader:cls,
 origin :metadata.path,submodule_search_locations:is_pkg?[path]:_b_.None,loader_state:metadata,
@@ -8977,7 +8977,7 @@ modpaths=[[base_path+".js","js",false]]}
 if(tryall ||hint=='pyc.js'){
 modpaths=modpaths.concat([[base_path+".pyc.js","pyc.js",false],[base_path+"/__init__.pyc.js","pyc.js",true]])}
 if(tryall ||hint=='py'){
-modpaths=modpaths.concat([[base_path+".py","py",false],[base_path+"/__init__.py","py",true]])}
+modpaths=modpaths.concat([[base_path+".py","py",false],[base_path+"/app.py","py",true]])}
 for(var j=0;notfound && j < modpaths.length;++j){try{var file_info=modpaths[j],module={__name__:fullname,$is_package:false}
 loader_data.code=$download_module(module,file_info[0],undefined)
 notfound=false
@@ -13039,7 +13039,7 @@ var update=function(mod,data){for(attr in data){mod[attr]=data[attr]}}
 var _window=self;
 var modules={}
 var browser={$package:true,$is_package:true,__initialized__:true,__package__:'browser',__file__:$B.brython_path.replace(/\/*$/g,'')+
-'/Lib/browser/__init__.py',bind:function(){
+'/Lib/browser/app.py',bind:function(){
 var $=$B.args("bind",3,{elt:null,evt:null,options:null},["elt","evt","options"],arguments,{options:_b_.None},null,null)
 var options=$.options
 if(typeof options=="boolean"){}
