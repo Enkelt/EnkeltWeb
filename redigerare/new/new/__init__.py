@@ -32,7 +32,7 @@ def transpile_and_run_code():
         f.writelines(data)
 
     # Runs code, captures output & errors
-    process = subprocess.Popen(['python', 'enkelt.py', 'tmp.e'], stdout=subprocess.PIPE)
+    process = subprocess.Popen(['python3', 'enkelt.py', 'tmp.e'], stdout=subprocess.PIPE)
     out, err = process.communicate()
 
     # Removes temprary file
