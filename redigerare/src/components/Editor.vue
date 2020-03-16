@@ -61,6 +61,7 @@
                 ).then(function (response) {
                     document.querySelector('#output').innerHTML = response.data.replace('\n', '<br/>');
                 }).catch(function (error) {
+                    console.log(error);
                     document.querySelector('#output').innerHTML = error;
                 });
             },
