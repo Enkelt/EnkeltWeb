@@ -8,7 +8,7 @@
                             <h2>Redigerare</h2>
                         </b-col>
                         <b-col cols="3">
-                            <b-button @click="runCode" variant="info">Kör koden</b-button>
+                            <b-button @click="runCode" variant="info">Kör koden!</b-button>
                         </b-col>
                     </b-row>
                     <div class="editor-main">
