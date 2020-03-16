@@ -57,7 +57,8 @@
                         }
                     },
                 ).then(function (response) {
-                    document.querySelector('#output').innerHTML = response.data.replace('\n', '<br/>');
+                    const output = response.data
+                    document.querySelector('#output').innerHTML = String(output).replace('\n', '<br/>');
                 }).catch(function (error) {
                     document.querySelector('#output').innerHTML = error;
                 });
