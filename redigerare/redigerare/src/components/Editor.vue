@@ -12,7 +12,7 @@
                         </b-col>
                     </b-row>
                     <div class="editor-main">
-                        <textarea-autosize v-model="code" id="inputCode" placeholder="Kod..."></textarea-autosize>
+                        <textarea-autosize v-model="inputCode" id="inputCode" placeholder="Kod..."></textarea-autosize>
                     </div>
                 </div>
             </b-col>
@@ -37,22 +37,18 @@
         name: 'Editor',
         data() {
             return {
-                code: '',
+                inputCode: '',
                 output: '',
             }
         },
         methods: {
             runCode() {
-                this.axios.post('https://api.enkelt.io/v1/transpile', {code: this.code}, {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*'
-                    }
+                this.axios.post('https://api.enkelt.io/v1/transpile', {
+                    code: this.inputCode
                 }).then((response) => {
                     this.output = response;
                 }, (error) => {
-                    this.output = 'Något gick fel!';
-                    console.log(error);
+                    this.output = error;
                 });
             },
         }
