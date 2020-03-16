@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <b-container fluid="fluid">
+        <b-container fluid style="padding: 0 !important;">
             <Navbar></Navbar>
             <Editor></Editor>
         </b-container>
