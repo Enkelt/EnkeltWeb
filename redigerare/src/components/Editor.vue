@@ -8,7 +8,7 @@
                             <h2>Redigerare</h2>
                         </b-col>
                         <b-col cols="3">
-                            <b-button @click="startRunCode" variant="info">Kör</b-button>
+                            <b-button @click="runCode" variant="info">Kör</b-button>
                         </b-col>
                     </b-row>
                     <div class="editor-main">
@@ -41,16 +41,14 @@
             }
         },
         methods: {
-            startRunCode() {
-                this.runCode();
-            },
             runCode() {
                 const url = 'http://api.enkelt.io/v1/transpile';
                 this.axios.post(
                     url,
                     {
                         data: {
-                            code: this.inputCode
+                            code: this.inputCode,
+                            dev: true
                         }
                     },
                     {
@@ -61,7 +59,6 @@
                 ).then(function (response) {
                     document.querySelector('#output').innerHTML = response.data.replace('\n', '<br/>');
                 }).catch(function (error) {
-                    console.log(error);
                     document.querySelector('#output').innerHTML = error;
                 });
             },
