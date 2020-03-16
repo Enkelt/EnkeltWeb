@@ -13,9 +13,11 @@ limiter = Limiter(app, key_func=get_remote_address)
 def transpile_and_run_code():
     import subprocess
     import os
+    import json
 
     # Gets and prepares the source code
-    raw_data = request.form['code']
+    raw_data = request.get_json()
+    raw_data = raw_data['code']
     raw_data = raw_data.replace('\r', '')
     if len(raw_data) >= 50000:
         return 'Error! Maxlängd är 50000 tecken!'
@@ -45,4 +47,4 @@ def transpile_and_run_code():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+	app.run(host='0.0.0.0')
