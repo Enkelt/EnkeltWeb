@@ -45,7 +45,8 @@
             runCode() {
                 this.axios.post('https://api.enkelt.io/v1/transpile', {code: this.code}, {
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*'
                     }
                 }).then((response) => {
                     this.output = response;
