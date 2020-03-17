@@ -4,15 +4,15 @@
             <b-col md="6" sm="12">
                 <div class="editor-section">
                     <b-row class="editor-header">
-                        <b-col cols="9">
+                        <b-col cols="10">
                             <h2>Redigerare</h2>
                         </b-col>
-                        <b-col cols="3">
+                        <b-col cols="2">
                             <b-button @click="runCode" variant="info">Kör</b-button>
                         </b-col>
                     </b-row>
                     <div class="editor-main">
-                        <textarea-autosize v-model="inputCode" id="inputCode" placeholder="Kod..."></textarea-autosize>
+                        <textarea-autosize autocapitalize="off" autofocus v-model="inputCode" id="inputCode" placeholder="Kod..."></textarea-autosize>
                     </div>
                 </div>
             </b-col>
@@ -57,8 +57,14 @@
                         }
                     },
                 ).then(function (response) {
-                    const output = response.data
-                    document.querySelector('#output').innerHTML = String(output).replace('\n', '<br/>');
+                    const output = response.data;
+                    let tmp_output = output.split('');
+                    for (let i = 0; i < tmp_output.length; i++) {
+                        if (tmp_output[i] === '\n') {
+                            tmp_output[i] = '<br/>';
+                        }
+                    }
+                    document.querySelector('#output').innerHTML = tmp_output.join('');
                 }).catch(function (error) {
                     document.querySelector('#output').innerHTML = error;
                 });
@@ -71,31 +77,33 @@
     main {
         padding: 10px;
         width: 100%;
-        height: 100vh;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .editor-section {
-        border: 1px solid #eee;
         height: 100%;
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-    }
-    
-    #row {
-        height: 100%;
-        max-height: 100%;
-        width: 100%;
         margin-left: auto;
         margin-right: auto;
         overflow-y: scroll;
     }
     
-    .editor-header {
-        border-bottom: 1px solid #eee;
+    .editor-section {
+        border: 1px solid #ccc;
+        min-height: 100%;
+        width: 100%;
         padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 2px;
+    }
+    
+    #row {
+        height: 100%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .editor-header {
+        border-bottom: 1px solid #ccc;
+        padding: 5px;
+        margin: 2px;
+        max-width: 90%;
     }
     
     .editor-main {
@@ -106,8 +114,6 @@
         width: 100%;
         padding: 5px;
         border: none;
-        border-top: 1px solid #ccc;
-        border-left: 1px solid #ccc;
         border-radius: 2px;
         outline: none;
         font-family: monospace;
