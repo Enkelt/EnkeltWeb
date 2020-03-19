@@ -468,9 +468,42 @@
                                                 <div class="flag-wrapper">
                                                     <span class="hexa"></span>
                                                     <span class="flag">Klasser</span>
-                                                    <span class="time-wrapper"><span class="time">Mar 4 2020</span></span>
+                                                    <span class="time-wrapper"><span class="time">Mar 5 2020</span></span>
                                                 </div>
                                                 <div class="desc">Klasser lades till.</div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="direction-l">
+                                                <div class="flag-wrapper">
+                                                    <span class="hexa"></span>
+                                                    <span class="flag">Utökning</span>
+                                                    <span class="time-wrapper"><span class="time">Mar 7 2020</span></span>
+                                                </div>
+                                                <div class="desc">Utökningsbibliotek lades till.</div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="direction-r">
+                                                <div class="flag-wrapper">
+                                                    <span class="hexa"></span>
+                                                    <span class="flag">Enkelt 3.1!</span>
+                                                    <span class="time-wrapper"><span class="time">Mar 17 2020</span></span>
+                                                </div>
+                                                <div class="desc">Version 3.1 av Enkelt publicerades!</div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="direction-l">
+                                                <div class="flag-wrapper">
+                                                    <span class="hexa"></span>
+                                                    <span class="flag">Försök, Fånga, och kasta()</span>
+                                                    <span class="time-wrapper"><span class="time">Mar 18 2020</span></span>
+                                                </div>
+                                                <div class="desc">Man kan fånga och kasta felmeddelanden.</div>
                                             </div>
                                         </li>
                                     
