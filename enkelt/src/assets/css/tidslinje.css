@@ -2,19 +2,19 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.timeline_header .timeline_h1{
+.timeline_header .timeline_h1 {
     text-align: center;
     font-weight: bold;
     margin-top: 0;
 }
 
-header p{
+header p {
     text-align: center;
     margin-bottom: 0;
 }
 
-.hexa{
-    border: 0px;
+.hexa {
+    border: 0;
     float: left;
     text-align: center;
     height: 35px;
@@ -26,7 +26,7 @@ header p{
     margin-top: 15px;
 }
 
-.hexa:before{
+.hexa:before {
     content: "";
     position: absolute;
     left: 0;
@@ -38,7 +38,7 @@ header p{
     top: -15px;
 }
 
-.hexa:after{
+.hexa:after {
     content: "";
     position: absolute;
     left: 0;
@@ -85,7 +85,7 @@ header p{
     width: 16px;
     height: 10px;
     position: absolute;
-    background: #254d7d;
+    background-color: var(--info);;
     z-index: 5;
     left: 0;
     right: 0;
@@ -96,7 +96,7 @@ header p{
 }
 
 .timeline .hexa:before {
-    border-bottom: 4px solid #254d7d;
+    border-bottom: 4px solid var(--info);
     border-left-width: 8px;
     border-right-width: 8px;
     top: -4px;
@@ -105,7 +105,7 @@ header p{
 .timeline .hexa:after {
     border-left-width: 8px;
     border-right-width: 8px;
-    border-top: 4px solid #254d7d;
+    border-top: 4px solid var(--info);
     bottom: -4px;
 }
 
@@ -130,6 +130,9 @@ header p{
     padding: 6px 10px;
     text-align: left;
     border-radius: 5px;
+    color: #414450;
+    border: 1px solid #ccc;
+    box-shadow: none !important;
 }
 
 .direction-l .flag:after,
@@ -141,9 +144,8 @@ header p{
     height: 0;
     width: 0;
     margin-left: -8px;
-    border: solid transparent;
-    border-bottom-color: rgb(255,255,255);
-    border-width: 8px;
+    border: 8px solid transparent;
+    border-bottom-color: rgb(255, 255, 255);
     pointer-events: none;
 }
 
@@ -162,7 +164,7 @@ header p{
 .time-wrapper {
     display: block;
     position: relative;
-    margin: 4px 0 0 0;
+    margin: 4px;
     z-index: 14;
     line-height: 1em;
     vertical-align: middle;
@@ -178,14 +180,20 @@ header p{
 }
 
 .time {
-    background: #254d7d;
+    background: var(--info);
     display: inline-block;
     padding: 8px;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .desc {
     position: relative;
-    margin: 1em 0 0 0;
+    margin-top: 1em;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
     padding: 1em;
     background: rgb(254,254,254);
     -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
@@ -197,16 +205,45 @@ header p{
 .direction-l .desc,
 .direction-r .desc {
     position: relative;
-    margin: 1em 1em 0 1em;
+    margin-top: 1em;
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-bottom: 0;
     padding: 1em;
     z-index: 15;
 }
 
-@media(min-width: 990px){
+@media screen and (min-width: 1160px){
+    .timeline {
+        width: 800px;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 0;
+    }
+
+    .direction-l {
+        position: relative;
+        width: 380px;
+        float: left;
+        text-align: right;
+    }
+
+    .direction-r {
+        position: relative;
+        width: 380px;
+        float: right;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 990px) {
     .timeline {
         width: 660px;
-        margin: 0 auto;
         margin-top: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 0;
     }
 
     .timeline li:after {
@@ -255,17 +292,15 @@ header p{
         right: -16px;
         top: 50%;
         margin-top: -8px;
-        border: solid transparent;
-        border-left-color: rgb(254,254,254);
-        border-width: 8px;
+        border: 8px solid transparent;
+        border-left-color: rgb(254, 254, 254);
     }
 
     .direction-r .flag:after {
         top: 50%;
         margin-top: -8px;
-        border: solid transparent;
-        border-right-color: rgb(254,254,254);
-        border-width: 8px;
+        border: 8px solid transparent;
+        border-right-color: rgb(254, 254, 254);
         left: -8px;
     }
 
@@ -284,32 +319,24 @@ header p{
     }
 
     .time {
-        padding: 5px 10px;
+        padding-top: 5px;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-bottom: 5px;
     }
 
     .direction-r .desc {
-        margin: 1em 0 0 0.75em;
+        margin-top: 1em;
+        margin-right: 0;
+        margin-left: 0.75em;
+        margin-bottom: 0;
     }
 }
 
-@media(min-width: 1160px){
-    .timeline {
-        width: 800px;
-        margin: 0 auto;
-        margin-top: 20px;
-    }
+.flag-wrapper .flag {
+    margin-top: 12px;
+}
 
-    .direction-l {
-        position: relative;
-        width: 380px;
-        float: left;
-        text-align: right;
-    }
-
-    .direction-r {
-        position: relative;
-        width: 380px;
-        float: right;
-        text-align: left;
-    }
+.time-wrapper .time {
+    margin-top: 12px;
 }

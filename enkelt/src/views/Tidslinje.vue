@@ -13,12 +13,6 @@
                         <div class="doc-body row">
                             <div class="doc-content col-md-9 col-12 order-1">
                                 <div class="content-inner">
-                                    
-                                    
-                                    <header class="timeline_header">
-                                        <h1 class="timeline_h1">Enkelts Tidslinje</h1>
-                                    </header>
-                                    
                                     <ul class="timeline">
                                         <!-- Item 1 -->
                                         <li id="2018">
