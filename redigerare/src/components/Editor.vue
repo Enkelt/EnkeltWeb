@@ -42,7 +42,7 @@
         },
         methods: {
             runCode() {
-                const url = 'http://api.enkelt.io/v1/transpile';
+                const url = 'https://api.enkelt.io/v1/transpile';
                 this.axios.post(
                     url,
                     {
