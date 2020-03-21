@@ -44,7 +44,7 @@
                                                 <div class="flag-wrapper">
                                                     <span class="hexa"></span>
                                                     <span class="flag">Om & Annars</span>
-                                                    <span class="time-wrapper"><span class="time">Dec 13 2018</span></span>
+                                                    <span class="time-wrapper"><span class="time">December 13 2018</span></span>
                                                 </div>
                                                 <div class="desc">Om & Annars fungerar.</div>
                                             </div>
@@ -56,7 +56,7 @@
                                                 <div class="flag-wrapper">
                                                     <span class="hexa"></span>
                                                     <span class="flag">GitHub</span>
-                                                    <span class="time-wrapper"><span class="time">Dec 16 2018</span></span>
+                                                    <span class="time-wrapper"><span class="time">December 16 2018</span></span>
                                                 </div>
                                                 <div class="desc">Gjorde projektet till ett git-projekt och laddade upp det till GitHub.</div>
                                             </div>
@@ -68,7 +68,7 @@
                                                 <div class="flag-wrapper">
                                                     <span class="hexa"></span>
                                                     <span class="flag">Listor</span>
-                                                    <span class="time-wrapper"><span class="time">Dec 18 2018</span></span>
+                                                    <span class="time-wrapper"><span class="time">December 18 2018</span></span>
                                                 </div>
                                                 <div class="desc">Lade till listor.</div>
                                             </div>
@@ -80,7 +80,7 @@
                                                 <div class="flag-wrapper">
                                                     <span class="hexa"></span>
                                                     <span class="flag">GNU GPL v.3 -Licens</span>
-                                                    <span class="time-wrapper"><span class="time">Dec 20 2018</span></span>
+                                                    <span class="time-wrapper"><span class="time">December 20 2018</span></span>
                                                 </div>
                                                 <div class="desc">Projektet använder nu GNU GPL v.3 -licensen.</div>
                                             </div>
@@ -92,7 +92,7 @@
                                                 <div class="flag-wrapper">
                                                     <span class="hexa"></span>
                                                     <span class="flag">Webbsidan</span>
-                                                    <span class="time-wrapper"><span class="time">Dec 22 2018</span></span>
+                                                    <span class="time-wrapper"><span class="time">December 22 2018</span></span>
                                                 </div>
                                                 <div class="desc">Laddade upp webbsidan till GitHub.</div>
                                             </div>
@@ -104,7 +104,7 @@
                                                 <div class="flag-wrapper">
                                                     <span class="hexa"></span>
                                                     <span class="flag">Testa Enkelt i webbläsaren</span>
-                                                    <span class="time-wrapper"><span class="time">Dec 24 2018</span></span>
+                                                    <span class="time-wrapper"><span class="time">December 24 2018</span></span>
                                                 </div>
                                                 <div class="desc">Lade till Trinket så man kan testa Enkelt utan att ladda ner språket.</div>
                                             </div>
@@ -116,7 +116,7 @@
                                                 <div class="flag-wrapper">
                                                     <span class="hexa"></span>
                                                     <span class="flag">Enkelt-appen</span>
-                                                    <span class="time-wrapper"><span class="time">Dec 24 2018</span></span>
+                                                    <span class="time-wrapper"><span class="time">December 24 2018</span></span>
                                                 </div>
                                                 <div class="desc">Skapade Enkelt-appen.</div>
                                             </div>
@@ -128,7 +128,7 @@
                                                 <div class="flag-wrapper">
                                                     <span class="hexa"></span>
                                                     <span class="flag">Variabelerrormeddelanden</span>
-                                                    <span class="time-wrapper"><span class="time">Dec 30 2018</span></span>
+                                                    <span class="time-wrapper"><span class="time">December 30 2018</span></span>
                                                 </div>
                                                 <div class="desc">Det visas ett errormeddelande om man försöker använda en variabel som inte deklarerats.</div>
                                             </div>
@@ -457,12 +457,12 @@
                                         </li>
                                         
                                         <!-- Item 38 -->
-                                        <li>
-                                            <div class="direction-r">
+                                        <li id="2020">
+                                            <div class="direction-r" id="mar2020">
                                                 <div class="flag-wrapper">
                                                     <span class="hexa"></span>
                                                     <span class="flag">Klasser</span>
-                                                    <span class="time-wrapper"><span class="time">Mar 5 2020</span></span>
+                                                    <span class="time-wrapper"><span class="time">Mars 5 2020</span></span>
                                                 </div>
                                                 <div class="desc">Klasser lades till.</div>
                                             </div>
@@ -473,18 +473,41 @@
                                                 <div class="flag-wrapper">
                                                     <span class="hexa"></span>
                                                     <span class="flag">Utökning</span>
-                                                    <span class="time-wrapper"><span class="time">Mar 7 2020</span></span>
+                                                    <span class="time-wrapper"><span class="time">Mars 7 2020</span></span>
                                                 </div>
                                                 <div class="desc">Utökningsbibliotek lades till.</div>
                                             </div>
                                         </li>
-
+    
+                                        <li>
+                                            <div class="direction-r">
+                                                <div class="flag-wrapper">
+                                                    <span class="hexa"></span>
+                                                    <span class="flag">Enkelt.io förnyades</span>
+                                                    <span class="time-wrapper"><span class="time">Mars 10 2020</span></span>
+                                                </div>
+                                                <div class="desc">Webbsidan byggdes om.</div>
+                                            </div>
+                                        </li>
+    
+                                        <li>
+                                            <div class="direction-l">
+                                                <div class="flag-wrapper">
+                                                    <span class="hexa"></span>
+                                                    <span class="flag">Ny webbredigera</span>
+                                                    <span class="time-wrapper"><span class="time">Mars 16 2020</span></span>
+                                                </div>
+                                                <div class="desc">Webbredigraren förnyades</div>
+                                            </div>
+                                        </li>
+    
+    
                                         <li>
                                             <div class="direction-r">
                                                 <div class="flag-wrapper">
                                                     <span class="hexa"></span>
                                                     <span class="flag">Enkelt 3.1!</span>
-                                                    <span class="time-wrapper"><span class="time">Mar 17 2020</span></span>
+                                                    <span class="time-wrapper"><span class="time">Mars 17 2020</span></span>
                                                 </div>
                                                 <div class="desc">Version 3.1 av Enkelt publicerades!</div>
                                             </div>
@@ -495,7 +518,7 @@
                                                 <div class="flag-wrapper">
                                                     <span class="hexa"></span>
                                                     <span class="flag">Försök, Fånga, och kasta()</span>
-                                                    <span class="time-wrapper"><span class="time">Mar 18 2020</span></span>
+                                                    <span class="time-wrapper"><span class="time">Mars 18 2020</span></span>
                                                 </div>
                                                 <div class="desc">Man kan fånga och kasta felmeddelanden.</div>
                                             </div>
@@ -515,6 +538,8 @@
                                         <a class="nav-link scrollto" href="#jan2019">Januari</a>
                                         <a class="nav-link scrollto" href="#jul2019">Juli</a>
                                         <a class="nav-link scrollto" href="#aug2019">Augusti</a>
+                                        <a class="nav-link scrollto" href="#2020">2020</a>
+                                        <a class="nav-link scrollto" href="#mar2020">Mars</a>
                                     </nav><!--//doc-menu-->
                                 </div>
                             </div><!--//doc-sidebar-->
