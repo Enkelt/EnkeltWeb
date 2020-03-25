@@ -11,7 +11,7 @@
                 </div>
             </div><!--//branding-->
             <div class="tagline">
-                <p>Enkelt är världens första svenskspråkiga programmeringsspråk. och det perfekta valet för programmeringsundervisning på svenska.</p>
+                <p>Enkelt är världens första svenskspråkiga programmeringsspråk, och det perfekta valet för programmeringsundervisning på svenska.</p>
                 <p v-text="'v.' + version"></p>
                 <p></p>
             
@@ -19,7 +19,7 @@
             <div class="social-container">
                 <!-- Replace with your Github Button -->
                 <div class="github-btn mb-2">
-                    <a class="github-button" :href="project_github_link" data-size="large" aria-label="Visa Enkelt projektet på GitHub.">Enkelt</a>
+                    <a class="github-button" :href="project_github_link" data-size="large" aria-label="Enkelt-projektet på GitHub.">Enkelt</a>
                     <a class="github-button" :href="personal_github_link" data-size="large" aria-label="Följ Edvard Busck-Nielsen på GitHub">@Buscedv</a>
                 </div>
             </div><!--//social-container-->
