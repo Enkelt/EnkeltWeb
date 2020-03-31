@@ -49,7 +49,7 @@
     }
 
     code {
-        font-size: 0.9em;
+        font-size: 1em;
 
         font-family: monospace;
     }
