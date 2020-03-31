@@ -1921,13 +1921,13 @@
                                                 ],
                                             },
                                             {
-                                                title: 'Exempel 2',
+                                                title: 'Exempel 3',
                                                 description: 'Här är en för-loop som loopar genom alla element i en lista samt numrerar elementen',
                                                 code_lines: [
                                                     '$lista = ["a", "b", "c"]',
                                                     'för ($index, $sak; inom numrera($lista)) {',
                                                     '  skriv ($sak)',
-                                                    '  skriv ($idex)',
+                                                    '  skriv ($index)',
                                                     '}',
                                                 ],
                                                 output_lines: [
