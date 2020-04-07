@@ -105,7 +105,7 @@
 							<li>
 								<h4 v-text="library.title"></h4>
 								<p v-text="library.description"></p>
-								<button class="btn btn-info" data-toggle="modal" data-target="#libraryModal" @click="openLibrary(library.title, library.description)">Öppna</button>
+								<button class="btn btn-info" data-toggle="modal" data-target="#libraryModal" @click="openLibrary(library.title, library.description, library.real_name, library.type)">Öppna</button>
 								
 							</li>
 						</div>
@@ -155,7 +155,7 @@
 				        <div class="modal-body">
 					        Importera <strong>{{ openModalData.title }}</strong> så här:
 					        <br>
-					        <code>importera {{ openModalData.title }}</code>
+					        <code>{{ openModalData.cmd }}</code>
 			            </div>
 				        <div class="modal-footer">
 				            <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>

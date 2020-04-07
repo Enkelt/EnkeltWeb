@@ -44,9 +44,11 @@ let app = new Vue({
 				this.tmp_libraries = this.libraries;
 			}
 		},
-		openLibrary: function(title, description) {
+		openLibrary: function(title, description, real_name, type) {
 			this.openModalData.title = title;
 			this.openModalData.description = description;
+			this.openModalData.cmd = (type === 'extension') ? 'utöka ' : 'importera ';
+			this.openModalData.cmd += real_name;
 		},
 		openNewLibraryModal: function () {
 			this.newLibraryModalData = {
@@ -92,6 +94,7 @@ let app = new Vue({
 		openModalData: {
 			title: '',
 			description: '',
+			cmd: '',
 		},
 		tmp_libraries: [],
 		libraries: [],
