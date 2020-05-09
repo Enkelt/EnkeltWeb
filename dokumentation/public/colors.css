@@ -1,12 +1,12 @@
 :root {
     --light: #eff2f5;
-    --dark: #2f2f2f;
-    --almost-dark: #3f3f3f;
-    --light-dark: #666;
-    --accent: #5A8CFF;
-    --accent-hover: #497BEE;
+    --dark: #494d55;
+    --almost-dark: #494d55;
+    --light-dark: #a2a6af;
+    --accent: #ea5395;
+    --accent-hover: #e42679;
     --white: #fff;
-    --medium: #1c2023;
+    --medium: #494d55;
     --medium-two: #3e4145;
     --light-hover: rgba(224, 230, 235, 0.4);
 }

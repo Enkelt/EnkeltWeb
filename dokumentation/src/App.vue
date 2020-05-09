@@ -21,14 +21,15 @@
 </script>
 
 <style>
-    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Roboto|Open+Sans&display=swap');
 
     body {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Open Sans', sans-serif;
         padding: 0;
         margin: 0;
         height: 100vh;
         width: 100%;
+        background: var(--white);
     }
 
     #app {
