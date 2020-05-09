@@ -58,15 +58,15 @@
                     },
                 ).then(function (response) {
                     const output = response.data;
-                    let tmp_output = output.split('');
+                    let tmp_output = String(output).split('');
                     for (let i = 0; i < tmp_output.length; i++) {
                         if (tmp_output[i] === '\n') {
                             tmp_output[i] = '<br/>';
                         }
                     }
                     document.querySelector('#output').innerHTML = tmp_output.join('');
-                }).catch(function (error) {
-                    document.querySelector('#output').innerHTML = error;
+                }).catch(function () {
+                    document.querySelector('#output').innerHTML = 'Det inträffade ett fel! Om problemet kvarstår kontakta oss på: https://enkelt.io';
                 });
             },
         }
