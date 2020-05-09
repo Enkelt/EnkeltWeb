@@ -1,0 +1,26 @@
+{
+    "title": "Enkelt - Dokumentation",
+    "readmeLink": "https://raw.githubusercontent.com/wiki/Enkelt/Enkelt/Dokumentation.md",
+    "navLinks": [
+        {
+            "title": "Hem",
+            "link": "https://enkelt.io"
+        },
+        {
+            "title": "Redigerare",
+            "link": "https://redigerare.enkelt.io"
+        },
+        {
+            "title": "Bibliotek",
+            "link": "https://bibliotek.enkelt.io"
+        }
+    ],
+    "navIcons": [
+        {
+            "icon": ["fas", "info"],
+            "link": "https://enkelt.io"
+        }
+    ],
+    "searchHint": "Sök...",
+    "homeBtnText": "Hem"
+}
