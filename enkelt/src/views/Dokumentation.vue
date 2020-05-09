@@ -1690,6 +1690,12 @@
                             ],
                             [
                                 {
+                                    href: '#ternara_operatorer',
+                                    title: 'Ternära operatorer',
+                                },
+                            ],
+                            [
+                                {
                                     href: '#loopar',
                                     title: 'Loopar',
                                 },
@@ -1855,6 +1861,35 @@
                                                 ],
                                                 output_lines: [
                                                     'Inte Hej eller hej!',
+                                                ],
+                                            },
+                                        ],
+                                    },
+                                ],
+                            },
+                            {
+                                id: 'ternara_operatorer',
+                                title: 'Ternära opertorer',
+                                description: `
+			                            <em>Ternära operatorer</em> är ett sätt att använda om- och annars-uttryck på en rad.
+			                     `,
+                                usage: '[värde för sant] om [uttryck] annars [värde för falskt]',
+                                sub_sections: [
+                                    {
+                                        id: 'ternara_operatorer_exempel',
+                                        title: 'Exempel',
+                                        examples: [
+                                            {
+                                                title: 'Skriv en hälsning om ett namn givits.',
+                                                code_lines: [
+                                                    '$namn = in("Skriv ditt namn: ")',
+                                                    'skriv ("Hej" + $namn om $namn != "" annars "")',
+                                                ],
+                                                output_lines: [
+                                                    'Skriv ditt namn: Jonas',
+                                                    'Hej Jonas',
+                                                    'Skriv ditt namn: ',
+                                                    '',
                                                 ],
                                             },
                                         ],
@@ -2172,6 +2207,12 @@
                                     title: 'Bibliotek',
                                 },
                             ],
+                            [
+                                {
+                                    href: '#pilfunktioner',
+                                    title: 'Pilfunktioner',
+                                },
+                            ],
                         ],
                         sections: [
                             {
@@ -2340,7 +2381,8 @@
             },
         },
         mounted() {
-            document.title = 'Enkelt - Dokumentation'
+            document.title = 'Enkelt - Dokumentation';
+            window.location = 'https://dokumentation.enkelt.io';
         }
     }
 </script>

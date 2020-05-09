@@ -15,7 +15,7 @@
                 icon="puzzle_alt"
                 title="Dokumentation"
                 description="Hela språkets kompletta dokumentation."
-                link="/dokumentation">
+                link="https://dokumentation.enkelt.io">
             </section-card>
     
             <section-card

@@ -32,7 +32,7 @@
         name: 'Header',
         data() {
             return {
-                version: '3.1',
+                version: '4.0',
                 project_github_link: 'https://github.com/Enkelt/Enkelt',
                 personal_github_link: 'https://github.com/Buscedv',
             }
