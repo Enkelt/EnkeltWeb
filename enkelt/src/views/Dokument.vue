@@ -8,7 +8,7 @@
                     <div class="container">
                         <div id="doc-header" class="doc-header text-center">
                             <h1 class="doc-title"><span aria-hidden="true" class="icon icon_genius"></span> Dokument</h1>
-                            <div class="meta"><em class="far fa-clock"></em> Senast uppdaterad: Aug 10, 2019</div>
+                            <div class="meta"><em class="far fa-clock"></em> Senast uppdaterad: Maj 10, 2020</div>
                         </div><!--//doc-header-->
                         <div id="showcase" class="doc-body row">
                             <div class="doc-content col-md-9 col-12 order-1">
@@ -30,22 +30,12 @@
                                             <div class="row">
                                                 <div class="col-md-4 col-12 mb-3">
                                                     <div class="theme-card">
-                                                        <a href="https://docs.google.com/document/d/1NuqJv1b3imjD_ayTDXy1uK_At_Who_pwNaW120V2RIs/edit?usp=sharing" target="_blank"><img class="img-fluid" src="../assets/images/dokumentation.png" alt="Dokumentation v2" /></a>
+                                                        <a href="https://docs.google.com/document/d/154VkLuDyZRDYfUtP002I-S5rprlBmvdVZ2knIe9dSHA/edit?usp=sharing" target="_blank"><img class="img-fluid" src="../assets/images/dokumentation.png" alt="Dokumentation v4" /></a>
                                                         <div class="card-block">
-                                                            <h4 class="card-title">Dokumentation för Enkelt v3</h4>
+                                                            <h4 class="card-title">Dokumentation för Enkelt v4</h4>
                                                             <p class="card-text">Enkelts kompletta dokumentation.</p>
                                                         </div><!--//card-block-->
-                                                        <a class="mask" href="https://docs.google.com/document/d/1NuqJv1b3imjD_ayTDXy1uK_At_Who_pwNaW120V2RIs/edit?usp=sharing" target="_blank"><em class="icon fa fa-file"></em></a>
-                                                    </div><!--//theme-card-->
-                                                </div>
-                                                <div class="col-md-4 col-12 mb-3">
-                                                    <div class="theme-card">
-                                                        <a href="https://docs.google.com/document/d/1NuqJv1b3imjD_ayTDXy1uK_At_Who_pwNaW120V2RIs/edit?usp=sharing" target="_blank"><img class="img-fluid" src="../assets/images/dokumentation2.png" alt="Dokumentation v3" /></a>
-                                                        <div class="card-block">
-                                                            <h4 class="card-title">Dokumentation för Enkelt v2</h4>
-                                                            <p class="card-text">Enkelts dokumentation för den gamla versionen.</p>
-                                                        </div><!--//card-block-->
-                                                        <a class="mask" href="https://docs.google.com/document/d/1QbaGnYYpCtQ8MgBXJd3JJGqGAr_PPexYTLiu07fZV9g/edit?usp=sharing" target="_blank"><em class="icon fa fa-file"></em></a>
+                                                        <a class="mask" href="https://docs.google.com/document/d/154VkLuDyZRDYfUtP002I-S5rprlBmvdVZ2knIe9dSHA/edit?usp=sharing" target="_blank"><em class="icon fa fa-file"></em></a>
                                                     </div><!--//theme-card-->
                                                 </div>
                                                 <div class="col-md-4 col-12 mb-3">
