@@ -520,9 +520,121 @@
                                                     <span class="flag">Försök, Fånga, och kasta()</span>
                                                     <span class="time-wrapper"><span class="time">Mars 18 2020</span></span>
                                                 </div>
-                                                <div class="desc">Man kan fånga och kasta felmeddelanden.</div>
+                                                <div class="desc">Man kan nu fånga och kasta felmeddelanden.</div>
                                             </div>
                                         </li>
+
+                                        <li>
+                                            <div class="direction-r">
+                                                <div class="flag-wrapper">
+                                                    <span class="hexa"></span>
+                                                    <span class="flag">Slutligen</span>
+                                                    <span class="time-wrapper"><span class="time">Mars 21 2020</span></span>
+                                                </div>
+                                                <div class="desc">Lade till slutligen.</div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="direction-r">
+                                                <div class="flag-wrapper">
+                                                    <span class="hexa"></span>
+                                                    <span class="flag">Globala variabler</span>
+                                                    <span class="time-wrapper"><span class="time">Mars 21 2020</span></span>
+                                                </div>
+                                                <div class="desc">Man kan nu använda sig av globala variabler..</div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="direction-r">
+                                                <div class="flag-wrapper">
+                                                    <span class="hexa"></span>
+                                                    <span class="flag">Nycklar()</span>
+                                                    <span class="time-wrapper"><span class="time">Mars 21 2020</span></span>
+                                                </div>
+                                                <div class="desc">Få ut ett lexikons nycklar med .nycklar().</div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="direction-r">
+                                                <div class="flag-wrapper">
+                                                    <span class="hexa"></span>
+                                                    <span class="flag">Nya namn på Text() & Nummer()</span>
+                                                    <span class="time-wrapper"><span class="time">Mars 21 2020</span></span>
+                                                </div>
+                                                <div class="desc">Text() --> Sträng(), Nummer() --> Heltal().</div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="direction-l">
+                                                <div class="flag-wrapper">
+                                                    <span class="hexa"></span>
+                                                    <span class="flag">Ternära operatorer</span>
+                                                    <span class="time-wrapper"><span class="time">Mars 22 2020</span></span>
+                                                </div>
+                                                <div class="desc">Enradiga om- och annarsuttryck lades till.</div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="direction-l">
+                                                <div class="flag-wrapper">
+                                                    <span class="hexa"></span>
+                                                    <span class="flag">Lambda-funktioner</span>
+                                                    <span class="time-wrapper"><span class="time">Mars 22 2020</span></span>
+                                                </div>
+                                                <div class="desc">Enradiga funktioner som sparas i variabler.</div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="direction-r" id="apr2020">
+                                                <div class="flag-wrapper">
+                                                    <span class="hexa"></span>
+                                                    <span class="flag">Inbyggda utökningsbibliotek</span>
+                                                    <span class="time-wrapper"><span class="time">April 7 2020</span></span>
+                                                </div>
+                                                <div class="desc">Det finns nu inbyggda bibliotek, b.la. <em>matte</em> och <em>tid</em>.</div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="direction-l" id="maj2020">
+                                                <div class="flag-wrapper">
+                                                    <span class="hexa"></span>
+                                                    <span class="flag">Ärgemen & Ärversal</span>
+                                                    <span class="time-wrapper"><span class="time">Maj 8 2020</span></span>
+                                                </div>
+                                                <div class="desc">Funktionerna Ärgemen() & Ärversal() lades till.</div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="direction-r">
+                                                <div class="flag-wrapper">
+                                                    <span class="hexa"></span>
+                                                    <span class="flag">Ny dokumentationssida</span>
+                                                    <span class="time-wrapper"><span class="time">Maj 9 2020</span></span>
+                                                </div>
+                                                <div class="desc">En ny sida för dokumentationen skapades. <a href="https://dokumentation.enkelt.io">dokumentation.enkelt.io</a>.</div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="direction-r">
+                                                <div class="flag-wrapper">
+                                                    <span class="hexa"></span>
+                                                    <span class="flag">Enkelt 4.0</span>
+                                                    <span class="time-wrapper"><span class="time">Maj 9 2020</span></span>
+                                                </div>
+                                                <div class="desc">Enkelt 4.0 publicerades!</div>
+                                            </div>
+                                        </li>
+
+
                                     
                                     </ul>
                                 
@@ -540,6 +652,8 @@
                                         <a class="nav-link scrollto" href="#aug2019">Augusti</a>
                                         <a class="nav-link scrollto" href="#2020">2020</a>
                                         <a class="nav-link scrollto" href="#mar2020">Mars</a>
+                                        <a class="nav-link scrollto" href="#apr2020">April</a>
+                                        <a class="nav-link scrollto" href="#maj2020">Maj</a>
                                     </nav><!--//doc-menu-->
                                 </div>
                             </div><!--//doc-sidebar-->
