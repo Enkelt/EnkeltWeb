@@ -42,13 +42,12 @@
         },
         methods: {
             runCode() {
-                const url = 'https://api.enkelt.io/v1/transpile';
+                const url = 'https://enkelt-api.herokuapp.com/v1/transpile';
                 this.axios.post(
                     url,
                     {
                         data: {
-                            code: this.inputCode,
-                            dev: true
+                            code: this.inputCode
                         }
                     },
                     {
