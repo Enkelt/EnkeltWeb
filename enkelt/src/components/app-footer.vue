@@ -5,6 +5,7 @@
             <!-- Template by: https://themes.3rdwavemedia.com/ -->
             <small class="copyright" v-html="'&copy; Edvard Busck-Nielsen '+ year"></small>
             <a href="/sekretess">Sekretess</a>
+            <a href="https://themes.3rdwavemedia.com/" target="_blank" rel="noreferrer noopener">Design</a>
         </div><!--//container-->
     </footer><!--//footer-->
 </template>
