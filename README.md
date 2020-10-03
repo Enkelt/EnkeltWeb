@@ -4,5 +4,5 @@ Alla Enkelts webbsidor & webbtjänster
 - Enkelts webbsida (enkelt.io),
 - Webbredigeraren (redigerare.enkelt.io),
 - Bibliotekwebbsidan (bibliotek.enkelt.io),
-- Ladda ner enkelt -webbsidan,
+- Ladda ner enkelt-webbsidan,
 - Dokumentationssidan (Enkelt 4.0 -->) (dokumentation.enkelt.io)
