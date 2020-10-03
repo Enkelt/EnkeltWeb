@@ -13,6 +13,10 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "core-js": "^3.6.4",
     "eslint-loader": "^4.0.2",
+    "http-proxy": "^1.18.1",
+    "node-fetch": "^2.6.1",
+    "node-forge": "^0.10.0",
+    "serialize-javascript": "^5.0.1",
     "showdown": "^1.9.1",
     "vue": "^2.6.11"
   },

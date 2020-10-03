@@ -13,11 +13,16 @@
     "bootstrap-vue": "^2.7.0",
     "core-js": "^3.6.4",
     "core.js": "^0.4.2",
+    "http-proxy": "^1.18.1",
     "jquery": "^3.4.1",
+    "node-fetch": "^2.6.1",
+    "node-forge": "^0.10.0",
     "popper.js": "^1.16.1",
+    "serialize-javascript": "^5.0.1",
     "vue": "^2.6.11",
     "vue-axios": "^2.1.5",
-    "vue-textarea-autosize": "^1.1.1"
+    "vue-textarea-autosize": "^1.1.1",
+    "yargs-parser": "^20.2.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.2.0",
