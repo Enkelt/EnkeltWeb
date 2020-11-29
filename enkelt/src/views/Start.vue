@@ -90,7 +90,7 @@
                                                 <div class="code-block" style="line-height: 1px;">
                                                     <code>
                                                         <div class="code-block">
-                                                            <code><em style="color: lightgray">1 </em><code>skriv ("Hej, världen!)</code></code>
+                                                            <code><em style="color: lightgray">1 </em><code>skriv ("Hej, världen!")</code></code>
                                                         </div>
                                                     </code>
                                                 </div>
